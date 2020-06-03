@@ -4,9 +4,9 @@ const data = {
         nickname: "Matt",
         job: 'software developer',
         location: "Basking Ridge, NJ",
-        personalDesc: "I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between. My goal is to always build products that provide pixel-perfect, performant experiences.",
+        personalDesc: "I enjoy creating websites, apps, and programs that look good and preform well. My goal is to build products that provide users with an intuitive and enjoyable experience.",
         jobDesc: "I am a computer science student at the [University] [of] [Maryland] where I work on a wide variety of interesting and meaningful projects on a daily basis.",
-        listHeader: "Here are a few technologies I've been working with recently", 
+        listHeader: "Here are a few technologies I've been working with recently:", 
         list: ["Java", "Python", "C", "Javascript (ES6+)", "React.js", "HTML & CSS"] 
     },
 

@@ -1,5 +1,5 @@
-import React from 'react'
-import {Jumbotron, Col} from 'react-bootstrap'
+import React, {useState} from 'react'
+import {Jumbotron, Col, Button, Container} from 'react-bootstrap'
 
 const ImgPanel = (props) => {
     const bsStyle = 'mb-0 bg-cover text-center text-' + props.color
@@ -16,7 +16,7 @@ const Spacer = (props) => (
 
 const Underline = (props) => (
     <Col 
-        sm={props.length}
+        lg={props.length}
         className={'px-1 w-50 mx-auto pt-' + props.padding} 
         style={{borderBottom: props.width + 'px solid' + props.color }}
     ></Col>
@@ -37,8 +37,66 @@ const TagList = ({tags}) => {
     )
 }
 
+const GreenButton = (props) => {
+    const [color, setColor] = useState('#47cb9d')
+    const style = {transition: 'all .2s ease-in-out 0s', backgroundColor: color, width: 85}
+    return (
+        <Button 
+            variant='light'
+            className={props.className + ' border-0 text-white'} 
+            style={style} 
+            href={props.href}
+            onMouseOver={() => setColor(LightenDarkenColor('#47cb9d', -30))}
+            onMouseOut={() => setColor('#47cb9d')}
+            download={props.download}
+        >{props.children} </Button>
+    )
+}
+
+const ShadowDiv = (props) => {
+    const [shadow, setShadow] = useState('')
+    const transition = {transition: 'all .4s ease-in-out 0s'}
+    return (
+        <Container fluid 
+            className={props.className + ' ' + shadow} 
+            style={{...transition , ...props.style}}
+            href={props.href && props.href}
+            onMouseOver={() => setShadow('shadow')}
+            onMouseOut={() => setShadow('')}
+        >{props.children} </Container>
+    )
+}
+
+function LightenDarkenColor(col, amt) {
+    var usePound = false;
+  
+    if (col[0] == "#") {
+        col = col.slice(1);
+        usePound = true;
+    }
+ 
+    var num = parseInt(col,16)
+ 
+    var r = (num >> 16) + amt
+ 
+    if (r > 255) r = 255
+    else if  (r < 0) r = 0
+ 
+    var b = ((num >> 8) & 0x00FF) + amt
+ 
+    if (b > 255) b = 255
+    else if  (b < 0) b = 0
+ 
+    var g = (num & 0x0000FF) + amt
+ 
+    if (g > 255) g = 255
+    else if (g < 0) g = 0
+ 
+    return (usePound?"#":"") + (g | (b << 8) | (r << 16)).toString(16);
+  
+}
 
 const green = {color: '#47cb9d'} 
 const roundBottom = {borderBottomRightRadius: '45%', borderBottomLeftRadius: '45%'} 
 
-export {Spacer, Underline, TagList, NewBadge, green, roundBottom}
+export {Spacer, Underline, TagList, NewBadge, GreenButton, ShadowDiv, LightenDarkenColor, green, roundBottom}
