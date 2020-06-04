@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container, Image} from 'react-bootstrap'
+import {Container, Row, Col, Image} from 'react-bootstrap'
 import {BsPeopleCircle, BsFillXDiamondFill} from 'react-icons/bs'
 import {Spacer, green} from '../Components/Various'
 
@@ -48,8 +48,8 @@ const parseText = (text) => {
 const About = ({data}) => {
     return (
       <Container fluid>
-        <div className='d-flex p-5 align-items-center'>
-          <div>
+        <Row sm={1} md={2} className='p-5 justify-content-around'>
+          <Col>
             <h3 className='pb-3' id='about'>
               <BsPeopleCircle className='mb-1 mr-3' color='#47cb9d'/>
               About Me
@@ -61,11 +61,11 @@ const About = ({data}) => {
             </p>
             <p>{data.listHeader}</p>
             <List data={data.list}/>
-          </div>
-          <Spacer className='px-5'/>
-          <Spacer className='px-3'/>
-          <Image className='shadow' src={require('../Assets/headshot.jpg')} rounded />
-        </div>
+          </Col>
+          <Col md={{span: 'auto', offset: 1}}>
+            <Image fluid className='shadow' src={require('../Assets/headshot.jpg')} rounded />
+          </Col>
+        </Row>
       </Container>
     )
 }

@@ -26,12 +26,13 @@ const NewBadge = () => (
     <p className='ml-3 my-auto badge text-white' style={{backgroundColor:'#47cb9d', fontSize: 10}}>NEW</p> 
 )
 
-const TagList = ({tags}) => {
+const TagList = ({tags, justify}) => {
+    const justifyContent = justify=='start' ? 'justify-content-start' : 'justify-content-end'
     let tagComponents = tags.map(value => (
         <div className='mx-1 badge text-white'style={{backgroundColor: '#47cb9d'}}>{value}</div>
     ))
     return (
-        <div className='d-flex mr-3 my-4 justify-content-end'>
+        <div className={'d-flex mr-3 my-4 ' + justifyContent}>
             {tagComponents}
         </div>
     )

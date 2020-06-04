@@ -1,7 +1,7 @@
 import React from 'react'
 import {Container, Row, Col, Card, Image} from 'react-bootstrap'
 import {BsFolderFill} from 'react-icons/bs'
-import {Underline, TagList, NewBadge} from '../Components/Various' 
+import {Underline, TagList} from '../Components/Various' 
 
 const Header = () => (
     <div className='mb-5'>
@@ -13,20 +13,23 @@ const Header = () => (
 )
 
 const Project = ({name, tags, desc, img}) => (
-    <>
-        <div className='position-relative w-100'>
-            <Card className=' w-50 border-0 shadow position-absolute p-1' style={{top: 140}}>
-                <Card.Body><p className='mb-0 text-muted' style={{fontSize: 20}}>{desc}</p></Card.Body>
-            </Card>
-        </div>
-        <div className='d-flex py-4'>
-            <div>
+
+    <Container fluid className='position-relative py-5'>
+        <Row>
+            <Col md={4}>
                 <h3>{name}</h3>
-                <TagList tags={tags} />
-            </div>
-            <Image className='shadow ml-auto' src={require('../Assets/blinkResume.PNG')} style={{maxWidth: 650}}/>
-        </div>
-    </>
+                <TagList tags={tags} justify='start'/>
+            </Col>
+            <Col>
+                <Image fluid className='shadow' src={require('../Assets/blinkResume.PNG')}/>
+            </Col>
+        </Row>
+        <Card className='border-0 w-50 shadow p-1 position-absolute' style={{zIndex: 1, top: 150}}>
+            <Card.Body className='text-muted' style={{fontSize: 18}}>{desc}</Card.Body>
+        </Card>
+    </Container>
+
+
 )
 
 const Projects = ({data}) => {

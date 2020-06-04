@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {Nav, Col, Tab, Container} from 'react-bootstrap'
+import {Container, Row, Col, Nav, Tab} from 'react-bootstrap'
 import {BsFillBriefcaseFill, BsFillXDiamondFill} from 'react-icons/bs'
 import '../CSS/style.css'
 import {TagList, NewBadge} from '../Components/Various'
@@ -44,7 +44,7 @@ const Tabs = ({data}) => {
         )
     }) 
     return (
-        <Col sm={3} className='mr-5'>
+        <Col md='auto' className='mr-5'>
             <Nav className='d-flex flex-column' variant='tablist' defaultActiveKey='1'>{tabs}</Nav>
         </Col>
     )
@@ -52,7 +52,7 @@ const Tabs = ({data}) => {
 
 const Header = (props) => (
     <div>
-        <div className='d-flex'><h4>{props.text}{props.new && <NewBadge />}</h4></div>
+        <h4>{props.text}</h4>
         <h6 className='text-muted mb-3'>{props.date}</h6>
     </div>
 )
@@ -67,7 +67,7 @@ const ListItem = (props) => (
 
 const TabContent = ({jobTitles, dates, desc, tags}) => {
     let description = [], tabContent = [], allTags = []
-    allTags = tags.map(list => <TagList tags={list}/>)
+    allTags = tags.map(list => <TagList tags={list} justify='end'/>)
     description = desc.map(list => (list.map(item => (<ListItem>{item}</ListItem>))))
     for (let i = 0; i < jobTitles.length; i++) {
         tabContent[i] = 
@@ -95,11 +95,11 @@ const Work = ({data}) => (
           <BsFillBriefcaseFill className='mb-1 mr-3' color='#47cb9d'/>
           Where I've Worked 
         </h3>
-        <Tab.Container defaultActiveKey='0' style={{outline: 'none !important'}}>
-            <div className='d-flex'>
+        <Tab.Container defaultActiveKey='0'>
+            <Row>
                 <Tabs data={data.workplaces}/>
                 <TabContent jobTitles={data['jobTitles']} dates={data['dates']} desc={data['desc']} tags={data['tags']} />
-            </div>
+            </Row>
         </Tab.Container>
       </div>
     </Container>
