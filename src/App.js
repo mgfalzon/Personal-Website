@@ -13,6 +13,9 @@ import {Spacer} from './Components/Various'
 import MobileHeaderNav from './Mobile/MobileHeaderNav'
 import MobileAbout from './Mobile/MobileAbout'
 import MobileWork from './Mobile/MobileWork'
+import MobileProjects from './Mobile/MobileProjects'
+import MobileContact from './Mobile/MobileContact'
+
 
 /** 
 <BrowserView>
@@ -33,9 +36,9 @@ const App = () => (
       <MobileHeaderNav />
       <MobileAbout data={data['about']}/>
       <MobileWork  data={data['work']} />
-      <Projects data={data['projects']}/>
+      <MobileProjects  data={data['projects']} />
       <Spacer className='p-3' />
-      <Contact />
+      <MobileContact />
       <Spacer className='p-4' />
     </MobileView>
   </>

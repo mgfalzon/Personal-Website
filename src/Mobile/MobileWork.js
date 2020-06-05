@@ -1,11 +1,11 @@
 import React, {useState} from 'react'
-import {Container, Row, Col, Nav, Tab} from 'react-bootstrap'
+import {Container, Row, Col, Navbar, Nav, Tab} from 'react-bootstrap'
 import {BsFillBriefcaseFill, BsFillXDiamondFill} from 'react-icons/bs'
 import '../CSS/style.css'
 import {TagList, NewBadge} from '../Components/Various'
 
 const NavLink = (props) => {
-    const standard = {borderStyle: 'none none none solid', transition: 'all .2s ease-in-out'}
+    const standard = {whiteSpace: 'nowrap', borderStyle: 'none none solid none', transition: 'all .2s ease-in-out'}
     const unselectedStyle = {color: 'black', backgroundColor: 'white', borderStyle: 'none'}
     const hoverStyle      = {color: '#47cb9d', backgroundColor: 'rgba(233, 236, 239, 0.25)', borderStyle: 'none'}
     const selectedStyle   = {color: '#47cb9d', borderColor: '#47cb9d', backgroundColor: 'rgba(233, 236, 239, 0.25)'}
@@ -44,9 +44,7 @@ const Tabs = ({data}) => {
         )
     }) 
     return (
-        <Col md='auto' className='mr-5'>
-            <Nav className='d-flex flex-column' variant='tablist' defaultActiveKey='1'>{tabs}</Nav>
-        </Col>
+        <Nav className='mb-4' variant='tablist' defaultActiveKey='1' style={{flexWrap: 'nowrap', overflow: 'auto'}}>{tabs}</Nav>
     )
 }
 
@@ -80,26 +78,24 @@ const TabContent = ({jobTitles, dates, desc, tags}) => {
             </Tab.Pane>
     }
     return (
-        <Col className='shadow' > 
+        <Row className='shadow' > 
             <Tab.Content style={{transition: 'all .1s ease-in-out 0s'}}>
                 {tabContent}
             </Tab.Content>
-        </Col>
+        </Row>
     )
 }
 
 const Work = ({data}) => (
     <Container fluid>
-      <div className='p-5'>
+      <div className='py-5 px-4'>
         <h3 className='pb-3' id='work'>
           <BsFillBriefcaseFill className='mb-1 mr-3' color='#47cb9d'/>
           Where I've Worked 
         </h3>
         <Tab.Container defaultActiveKey='0'>
-            <Row>
-                <Tabs data={data.workplaces}/>
-                <TabContent jobTitles={data['jobTitles']} dates={data['dates']} desc={data['desc']} tags={data['tags']} />
-            </Row>
+            <Tabs data={data.workplaces}/>
+            <TabContent jobTitles={data['jobTitles']} dates={data['dates']} desc={data['desc']} tags={data['tags']} />
         </Tab.Container>
       </div>
     </Container>
