@@ -70,8 +70,9 @@ const NavLink = (props) => {
 
 const Menu = (props) => {
   return (
+    <div style={{zIndex: 3, position: 'sticky', top: 72}}>
     <Fade in={props.in}>
-      <Container fluid className={'bg-white ' + (!props.in && 'd-none')} style={{zIndex: 3, ...props.position}}>
+      <Container fluid className={'bg-white ' + (!props.in && 'd-none')} style={{position: 'absolute'}}>
         <Nav className='d-flex flex-column mx-auto'>
           <NavLink href='#about'>About Me</NavLink>
           <NavLink href='#work'>Work</NavLink>
@@ -80,13 +81,14 @@ const Menu = (props) => {
         </Nav> 
       </Container>
     </Fade>
+    </div>
   )
 }
 
 class HeaderNav extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {shadow: '', menu: false, brand: false, menuPosition:{position: 'absolute', top: 400}}
+    this.state = {shadow: '', menu: false, brand: false}
   }
 
   componentDidMount() {window.addEventListener('scroll', this.handleScroll)}
@@ -94,14 +96,14 @@ class HeaderNav extends React.Component {
 
   handleScroll = () => {
     (window.pageYOffset < 300) ? 
-      this.setState(() => ({shadow: '', brand: false, menuPosition: {position: 'absolute', top: 400}})) : 
-      this.setState(() => ({shadow: 'shadow-sm', brand: true, menuPosition: {position: 'fixed', top: 72}})) 
+      this.setState(() => ({shadow: '', brand: false})) : 
+      this.setState(() => ({shadow: 'shadow-sm', brand: true})) 
   }
 
   onClick = () => {
     this.state.menu ? 
-    this.setState(() => ({menu: false})) :
-    this.setState(() => ({menu: true})) 
+    this.setState(() => ({shadow: 'shadow-sm', menu: false})) :
+    this.setState(() => ({shadow: '', menu: true})) 
   }
 
   render() {
@@ -118,7 +120,7 @@ class HeaderNav extends React.Component {
               <NavBtn onClick={this.onClick}></NavBtn>
           </Nav> 
         </Navbar>
-        <Menu in={this.state.menu} position={this.state.menuPosition}/>
+        <Menu in={this.state.menu}/>
       </>
     )
   }
