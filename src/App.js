@@ -1,5 +1,6 @@
 import React from 'react';
 import data from './data'
+import {BrowserView, MobileView} from 'react-device-detect'
 
 import Header from './Components/Header'
 import Navbar from './Components/Navbar'
@@ -9,16 +10,34 @@ import Projects from './Sections/Projects'
 import Contact from './Sections/Contact'
 import {Spacer} from './Components/Various'
 
+import MobileHeaderNav from './Mobile/MobileHeaderNav'
+import MobileAbout from './Mobile/MobileAbout'
+import MobileWork from './Mobile/MobileWork'
+
+/** 
+<BrowserView>
+  <Header />
+  <Navbar />
+  <About data={data['about']}/>
+  <Work  data={data['work']} />
+  <Projects data={data['projects']}/>
+  <Spacer className='p-3' />
+  <Contact />
+  <Spacer className='p-4' />
+</BrowserView>
+**/
+
 const App = () => (
   <>
-    <Header />
-    <Navbar />
-    <About data={data['about']}/>
-    <Work  data={data['work']} />
-    <Projects data={data['projects']}/>
-    <Spacer className='p-3' />
-    <Contact />
-    <Spacer className='p-4' />
+    <MobileView>
+      <MobileHeaderNav />
+      <MobileAbout data={data['about']}/>
+      <MobileWork  data={data['work']} />
+      <Projects data={data['projects']}/>
+      <Spacer className='p-3' />
+      <Contact />
+      <Spacer className='p-4' />
+    </MobileView>
   </>
 )
 
