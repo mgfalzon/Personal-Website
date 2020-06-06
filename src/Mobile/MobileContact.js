@@ -14,7 +14,7 @@ const MobileContact = () => (
                 <div className='d-flex'>
                     <GreenButton href='mailto:mattgfalzon@gmail.com'>Email</GreenButton>
                     <Spacer className='mx-3'/>
-                    <GreenButton href={process.env.PUBLIC_URL + '/resume.pdf'} download='resume.pdf'>Resume</GreenButton>
+                    <GreenButton href={process.env.PUBLIC_URL + '/resume.pdf'} download='Matthew Falzon Resume.pdf'>Resume</GreenButton>
                 </div>
             </Container>
         </div>
