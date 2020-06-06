@@ -24,7 +24,7 @@ const Project = ({name, tags, desc, img}) => (
                 </Card>
             </Row>
             <Row>
-                <Image fluid className='py-3 shadow' src={require('../Assets/blinkResume.PNG')}/>
+                <Image fluid className='w-100 py-3 shadow' src={require('../Assets/blinkResume.PNG')} style={{height: 'auto'}}/>
             </Row>
     </Container>
 
