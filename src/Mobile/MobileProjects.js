@@ -24,7 +24,7 @@ const Project = ({name, tags, desc, img}) => (
                 </Card>
             </Row>
             <Row>
-                <Image className='py-3 shadow' src={require('../Assets/blinkResume.PNG')} style={{objectFit: 'cover'}}/>
+                <Image className='py-3 shadow' src={require('../Assets/blinkResume.PNG')} style={{objectFit: 'contain'}}/>
             </Row>
     </Container>
 
