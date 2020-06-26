@@ -21,7 +21,7 @@ const Project = ({name, tags, desc, img}) => (
                 <TagList tags={tags} justify='start'/>
             </Col>
             <Col>
-                <Image fluid className='shadow' src={require('../Assets/blinkResume.PNG')}/>
+                <Image fluid className='shadow' src={require('../Assets/' + img)}/>
             </Col>
         </Row>
         <Card className='border-0 w-50 shadow p-1 position-absolute' style={{zIndex: 1, top: 150}}>

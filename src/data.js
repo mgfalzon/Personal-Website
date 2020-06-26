@@ -32,21 +32,23 @@ const data = {
         ],
        ],
        tags: [
-           ["React.js", "Javascript", "HTML & CSS"],
-           ["HTML & CSS", "Javascript", "PHP", "SQL"],
+           ["React.js", "React-Bootstrap"],
+           ["React.js", "React-Bootstrap", "PHP", "MySQL"],
            ["Blender"],
            []
        ]
     },
 
     projects: {
-        names: ["Blink Resume"],
-        tags: [["React.js", "Javascript", "HTML & CSS"]],
+        names: ["Blink Resume", 'FGSM Student Portal'],
+        tags: [["React.js", "React-Bootstrap"], ['React.js', 'React-Bootstrap', 'PHP', 'MySQL']],
         desc: [
-            'Generate an HTML resume with video introduction tailored for making the resume review process more personal'
+            'Generate an HTML resume with video introduction tailored for making the resume review process more personal',
+            'Student portal for the Federal and Global Fellows Programs at UMD'
         ],
         imgs: [
-            '../Assets/blinkResume.PNG'
+            'blinkResume.PNG',
+            'studentPortal.PNG'
         ]
     }
 }
