@@ -23,7 +23,7 @@ const Project = ({name, tags, desc, img}) => (
                     <Card.Body className='text-muted' style={{fontSize: 18}}>{desc}</Card.Body>
                 </Card>
             </Row>
-            <Image fluid className='shadow' src={require('../Assets/blinkResume.PNG')} style={{objectFit: 'scale-down'}}/>
+            <Image fluid className='shadow' src={require('../Assets/' + img)} style={{objectFit: 'scale-down'}}/>
     </Container>
 
 
