@@ -80,7 +80,7 @@ const TabContent = ({jobTitles, dates, desc, tags}) => {
             </Tab.Pane>
     }
     return (
-        <Col className='shadow' > 
+        <Col className='shadow rounded' > 
             <Tab.Content style={{transition: 'all .1s ease-in-out 0s'}}>
                 {tabContent}
             </Tab.Content>

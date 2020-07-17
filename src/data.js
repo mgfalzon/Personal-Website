@@ -49,6 +49,10 @@ const data = {
         imgs: [
             'blinkResume.PNG',
             'studentPortal.PNG'
+        ],
+        demos: [
+            null,
+            '/student-portal'
         ]
     }
 }

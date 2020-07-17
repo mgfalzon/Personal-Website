@@ -12,7 +12,7 @@ const Header = () => (
     </div>
 )
 
-const Project = ({name, tags, desc, img}) => (
+const Project = ({name, tags, desc, img, demo}) => (
 
     <Container fluid className='position-relative py-5'>
         <Row>
@@ -24,8 +24,15 @@ const Project = ({name, tags, desc, img}) => (
                 <Image fluid className='shadow' src={require('../Assets/' + img)}/>
             </Col>
         </Row>
-        <Card className='border-0 w-50 shadow p-1 position-absolute' style={{zIndex: 1, top: 150}}>
-            <Card.Body className='text-muted' style={{fontSize: 18}}>{desc}</Card.Body>
+        <Card className='border-0 w-50 shadow p-1 position-absolute rounded' style={{zIndex: 1, top: 150}}>
+            <Card.Body className='text-muted' style={{fontSize: 18}}>
+                {desc}<br />
+                {demo &&
+                <div className='pt-2'>
+                    <small><a target='_blank' href={demo}>Live Demo</a></small>
+                </div>
+                }
+            </Card.Body>
         </Card>
     </Container>
 
@@ -35,7 +42,7 @@ const Project = ({name, tags, desc, img}) => (
 const Projects = ({data}) => {
     const projects = []
     for(let i = 0; i < data.names.length; i++) {
-        projects.push(<Project name={data.names[i]} tags={data.tags[i]} desc={data.desc[i]} img={data.imgs[i]} />)
+        projects.push(<Project name={data.names[i]} tags={data.tags[i]} desc={data.desc[i]} img={data.imgs[i]} demo={data.demos[i]} />)
     }
     return (
       <Container fluid>
