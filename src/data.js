@@ -16,23 +16,25 @@ const data = {
        dates: ["May 2020 - Present", "Spring 2020 - Present", "Summer 2019", "Winter 2020, Summer 2019"],
        desc: [
         [
-            "Responsible for full-stack development of Blink Resume website and app",
-            "Programmed primarily in React.js with react-bootstrap"
+            "Development of the Blink Resume Progressive Web App (PWA) to quickly create more personalized resume applications",
+            "Designed UI and UX then implemented interface with React.js and created a web API using Node.js that communicates with Google Firebase ",
+            "Lead a team of three using GitHub for version control"
         ],
         [
-            "Full-stack development of student portal and administrative tools",
-            "Responsible as main point of contact for students with regards to errors or confusion on the portal"
+            "Development of the student portal and administrative tools including management of a MySQL based database",
+            "Redesigned the entire front-end for the student portal and admin portal in React.js",
+            "Used PHP to create an API which connects 1,200 users and 30 administrators with their respective portals, and provides them with the tools they need to partake in the program"
         ],
         [
             "Created a curriculum for a class, 'Introduction to 3D Animation'",
-            "Taught students how to use Blender software For modeling, rigging, animation, rendering, compositing and video editing"
+            "Taught a 30 student class how to use Blender software For modeling, rigging, animation, rendering, compositing and video editing"
         ],
         [
             "Worked at various sites installing and updating electrical appliances including but not limited to switches, outlets, lights, Fixtures, and smoke detectors"
         ],
        ],
        tags: [
-           ["React.js", "React-Bootstrap", "Firebase"],
+           ["React.js", "Node.js", "Firebase"],
            ["HTML", "CSS", "Bootstrap", "JQuery", "PHP", "MySQL"],
            ["Blender"],
            []
@@ -41,7 +43,7 @@ const data = {
 
     projects: {
         names: ["Blink Resume", 'FGSM Student Portal'],
-        tags: [["React.js", "React-Bootstrap"], ['React.js', 'React-Bootstrap', 'PHP', 'MySQL']],
+        tags: [["React.js", "Node.js", "Firebase"], ['React.js', 'React-Bootstrap', 'PHP', 'MySQL']],
         desc: [
             'Generate an HTML resume with video introduction tailored for making the resume review process more personal',
             'Student portal for the Federal and Global Fellows Programs at UMD'
