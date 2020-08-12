@@ -42,15 +42,21 @@ const data = {
     },
 
     projects: {
-        names: ["Blink Resume", 'FGSM Student Portal'],
-        tags: [["React.js", "Node.js", "Firebase"], ['React.js', 'React-Bootstrap', 'PHP', 'MySQL']],
+        names: ["Blink Resume", 'FGSM Student Portal', 'Blackjack'],
+        tags: [
+            ["React.js", "Node.js", "Firebase"], 
+            ['React.js', 'React-Bootstrap', 'PHP', 'MySQL'],
+            ['Python']
+        ],
         desc: [
             'Generate an HTML resume with video introduction tailored for making the resume review process more personal',
-            'Student portal for the Federal and Global Fellows Programs at UMD'
+            'Student portal for the Federal and Global Fellows Programs at UMD',
+            'A simple terminal based Blackjack application'
         ],
         imgs: [
             'blinkResume.PNG',
-            'studentPortal.PNG'
+            'studentPortal.PNG',
+            'blackjack.png'
         ],
         demos: [
             null,

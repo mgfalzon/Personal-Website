@@ -20,8 +20,10 @@ const Project = ({name, tags, desc, img, demo}) => (
                 <h3>{name}</h3>
                 <TagList tags={tags} justify='start'/>
             </Col>
-            <Col>
-                <Image fluid className='shadow' src={require('../Assets/' + img)}/>
+            <Col className='d-flex justify-content-center'>
+                <Image fluid className='rounded shadow' src={require('../Assets/' + img)} 
+                    style={{maxHeight: 500, minWidth: 500}}
+                />
             </Col>
         </Row>
         <Card className='border-0 w-50 shadow p-1 position-absolute rounded' style={{zIndex: 1, top: 150}}>
