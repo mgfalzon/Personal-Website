@@ -60,7 +60,13 @@ const data = {
         ],
         demos: [
             null,
-            '/student-portal'
+            '/student-portal',
+            null
+        ],
+        source: [
+            null, 
+            null,
+            'https://github.com/mgfalzon/blackjack'
         ]
     }
 }

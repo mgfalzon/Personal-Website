@@ -12,7 +12,7 @@ const Header = () => (
     </div>
 )
 
-const Project = ({name, tags, desc, img, demo}) => (
+const Project = ({name, tags, desc, img, demo, source}) => (
 
     <Container fluid className='position-relative py-5'>
         <Row>
@@ -29,9 +29,14 @@ const Project = ({name, tags, desc, img, demo}) => (
         <Card className='border-0 w-50 shadow p-1 position-absolute rounded' style={{zIndex: 1, top: 150}}>
             <Card.Body className='text-muted' style={{fontSize: 18}}>
                 {desc}<br />
-                {demo &&
+                {(demo || source) &&
                 <div className='pt-2'>
-                    <small><a target='_blank' href={demo}>Live Demo</a></small>
+                    {demo &&
+                        <small><a target='_blank' href={demo}>Live Demo</a></small>
+                    }
+                    {source &&
+                        <small><a target='_blank' href={source}>View Source</a></small>
+                    }
                 </div>
                 }
             </Card.Body>
@@ -44,7 +49,11 @@ const Project = ({name, tags, desc, img, demo}) => (
 const Projects = ({data}) => {
     const projects = []
     for(let i = 0; i < data.names.length; i++) {
-        projects.push(<Project name={data.names[i]} tags={data.tags[i]} desc={data.desc[i]} img={data.imgs[i]} demo={data.demos[i]} />)
+        projects.push(<Project 
+            name={data.names[i]} tags={data.tags[i]} 
+            desc={data.desc[i]}  img={data.imgs[i]} 
+            demo={data.demos[i]} source={data.source[i]}
+        />)
     }
     return (
       <Container fluid>
