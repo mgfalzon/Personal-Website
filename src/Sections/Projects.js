@@ -20,7 +20,7 @@ const Project = ({name, tags, desc, img, demo, source}) => (
                 <h3>{name}</h3>
                 <TagList tags={tags} justify='start'/>
             </Col>
-            <Col className='d-flex justify-content-center'>
+            <Col className='d-flex justify-content-end'>
                 <Image fluid className='rounded shadow' src={require('../Assets/' + img)} 
                     style={{maxHeight: 500, minWidth: 500}}
                 />
