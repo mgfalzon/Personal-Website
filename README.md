@@ -2,8 +2,6 @@
 
 <img src="https://image.flaticon.com/icons/svg/3233/3233454.svg" align="right"
      alt="Icon" width="120" height="178">
-     
-My personal website
 
 * My portfolio website provides a collection of all relevent information
   an employer might need to know about me!
