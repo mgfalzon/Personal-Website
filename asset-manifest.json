@@ -1,19 +1,20 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.ee9b4caf.chunk.css",
-    "main.js": "/portfolio/static/js/main.c74c44a4.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.c74c44a4.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.c213bcf6.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.c213bcf6.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.fb1b3dac.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.fb1b3dac.js.map",
     "static/css/2.af3c1da9.chunk.css": "/portfolio/static/css/2.af3c1da9.chunk.css",
-    "static/js/2.ebaeadae.chunk.js": "/portfolio/static/js/2.ebaeadae.chunk.js",
-    "static/js/2.ebaeadae.chunk.js.map": "/portfolio/static/js/2.ebaeadae.chunk.js.map",
+    "static/js/2.0b8b801b.chunk.js": "/portfolio/static/js/2.0b8b801b.chunk.js",
+    "static/js/2.0b8b801b.chunk.js.map": "/portfolio/static/js/2.0b8b801b.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "precache-manifest.c1bb8cae2021068e20ab734c68d4f3ca.js": "/portfolio/precache-manifest.c1bb8cae2021068e20ab734c68d4f3ca.js",
+    "precache-manifest.f92cfc14eefc300390373566fe767718.js": "/portfolio/precache-manifest.f92cfc14eefc300390373566fe767718.js",
     "service-worker.js": "/portfolio/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/portfolio/static/css/2.af3c1da9.chunk.css.map",
     "static/css/main.ee9b4caf.chunk.css.map": "/portfolio/static/css/main.ee9b4caf.chunk.css.map",
-    "static/js/2.ebaeadae.chunk.js.LICENSE.txt": "/portfolio/static/js/2.ebaeadae.chunk.js.LICENSE.txt",
+    "static/js/2.0b8b801b.chunk.js.LICENSE.txt": "/portfolio/static/js/2.0b8b801b.chunk.js.LICENSE.txt",
+    "static/media/blackjack.png": "/portfolio/static/media/blackjack.ae955feb.png",
     "static/media/blinkResume.PNG": "/portfolio/static/media/blinkResume.8ab1e663.PNG",
     "static/media/headshot.jpg": "/portfolio/static/media/headshot.2fb04570.jpg",
     "static/media/studentPortal.PNG": "/portfolio/static/media/studentPortal.8e0e2848.PNG"
@@ -21,8 +22,8 @@
   "entrypoints": [
     "static/js/runtime-main.fb1b3dac.js",
     "static/css/2.af3c1da9.chunk.css",
-    "static/js/2.ebaeadae.chunk.js",
+    "static/js/2.0b8b801b.chunk.js",
     "static/css/main.ee9b4caf.chunk.css",
-    "static/js/main.c74c44a4.chunk.js"
+    "static/js/main.c213bcf6.chunk.js"
   ]
 }
