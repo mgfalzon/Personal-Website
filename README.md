@@ -15,7 +15,7 @@
   
 <br/>
 <h2>
-     <a href="http://mgfalzon.github.io/student-portal" target="_blank">Visit My Website</a>
+     <a href="http://mgfalzon.github.io/portfolio" target="_blank">Visit My Website</a>
 </h2>
      
 
