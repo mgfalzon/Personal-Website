@@ -22,7 +22,7 @@ const Icons = () => (
   <div className='d-flex justify-content-center'>
     <Icon href='mailto:mattgfalzon@gmail.com'><FaEnvelope/></Icon>
     <Icon href='https://www.linkedin.com/in/matthew-falzon-225527188/'><FaLinkedin/></Icon>
-    <Icon href='https://github.com/MFalzon21/'><FaGithubSquare/></Icon>
+    <Icon href='https://github.com/mgfalzon/'><FaGithubSquare/></Icon>
   </div>
 )
 

@@ -11,19 +11,19 @@ const data = {
     },
 
     work: {
-       workplaces: ["SPS Consulting", "Federal & Global Fellows", "New Providence High School", "Falzon Electrical Contracting"],
+       workplaces: ["Federal & Global Fellows", "SPS Consulting", "New Providence High School", "Falzon Electrical Contracting"],
        jobTitles: ["Full-Stack Developer", "Full-Stack Developer", "Animation Instructor", "Assistant Electrician"],
-       dates: ["May 2020 - Present", "Spring 2020 - Present", "Summer 2019", "Winter 2020, Summer 2019"],
+       dates: ["Spring 2020 - Present", "Summer 2020", "Summer 2019", "Winter 2020, Summer 2019"],
        desc: [
-        [
-            "Development of the Blink Resume Progressive Web App (PWA) to quickly create more personalized resume applications",
-            "Designed UI and UX then implemented interface with React.js and created a web API using Node.js that communicates with Google Firebase ",
-            "Lead a team of three using GitHub for version control"
-        ],
         [
             "Development of the student portal and administrative tools including management of a MySQL based database",
             "Redesigned the entire front-end for the student portal and admin portal in React.js",
-            "Used PHP to create an API which connects 1,200 users and 30 administrators with their respective portals, and provides them with the tools they need to partake in the program"
+            "Used PHP to create an API which connects 250 users and 8 administrators with their respective portals, and provides them with the tools they need to partake in the program"
+        ],
+        [
+            "Development of the Blink Resume Progressive Web App (PWA) to quickly create more personalized resume applications",
+            "Designed UI and UX then implemented interface with React.js which connects to a web API using Node.js and communicates with Google Firebase ",
+            "Lead a team of three using GitHub for version control"
         ],
         [
             "Created a curriculum for a class, 'Introduction to 3D Animation'",
@@ -34,8 +34,8 @@ const data = {
         ],
        ],
        tags: [
+           ["React.js", "HTML/CSS", "Bootstrap", "JQuery", "PHP", "MySQL"],
            ["React.js", "Node.js", "Firebase"],
-           ["HTML", "CSS", "Bootstrap", "JQuery", "PHP", "MySQL"],
            ["Blender"],
            []
        ]
@@ -65,7 +65,7 @@ const data = {
         ],
         source: [
             null, 
-            null,
+            'https://github.com/mgfalzon/student-portal',
             'https://github.com/mgfalzon/blackjack'
         ]
     }
