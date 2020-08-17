@@ -32,7 +32,7 @@ const Project = ({name, tags, desc, img, demo, source}) => (
                 {(demo || source) &&
                 <div className='pt-2'>
                     {demo &&
-                        <small><a target='_blank' href={demo}>Live Demo</a></small>
+                        <small className='mr-3'><a target='_blank' href={demo}>Live Demo</a></small>
                     }
                     {source &&
                         <small><a target='_blank' href={source}>View Source</a></small>
