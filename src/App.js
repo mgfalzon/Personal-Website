@@ -9,6 +9,7 @@ import About from './Sections/About'
 import Work from './Sections/Work'
 import Projects from './Sections/Projects'
 import Contact from './Sections/Contact'
+import Archive from './Sections/Archive'
 import {Spacer} from './Components/Various'
 
 // Mobile
@@ -28,6 +29,7 @@ const App = () => (
       <About data={data['about']}/>
       <Work  data={data['work']} />
       <Projects data={data['projects']}/>
+      <Archive data={data['archive']}/>
       <Spacer className='p-3' />
       <Contact />
       <Spacer className='p-4' />

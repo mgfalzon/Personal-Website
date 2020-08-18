@@ -68,6 +68,16 @@ const data = {
             'https://github.com/mgfalzon/student-portal',
             'https://github.com/mgfalzon/blackjack'
         ]
+    },
+
+    archive: {
+        titles: ["Art Gallery"],
+        subtitles: ["An art gallery for a friend - Joshua Malekan"],
+        sources: ["https://github.com/mgfalzon/gallery"],
+        demos: ["https://mgfalzon.github.io/gallery"],
+        desc: ["this is a description"],
+        tags: [["React.js"]],
+        imgs: [null]
     }
 }
 
