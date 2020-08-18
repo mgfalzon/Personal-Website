@@ -79,7 +79,7 @@ const data = {
         desc: [
           "A simple art gallery built in React.js for a friend"
         ],
-        tags: [["React.js"]],
+        tags: [["React.js", "Javascript"]],
         imgs: [['blinkResume.PNG', 'studentPortal.PNG']]
     }
 }

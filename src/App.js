@@ -28,8 +28,8 @@ const App = () => (
       <Navbar />
       <About data={data['about']}/>
       <Work  data={data['work']} />
-      <Archive data={data['archive']}/>
       <Projects data={data['projects']}/>
+      <Archive data={data['archive']}/>
       <Spacer className='p-3' />
       <Contact />
       <Spacer className='p-4' />

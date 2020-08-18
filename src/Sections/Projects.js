@@ -6,7 +6,7 @@ import {Underline, TagList} from '../Components/Various'
 const Header = () => (
     <div className='mb-5'>
         <h3 className='text-center' id='projects'>
-            <BsFolderFill className='mb-1 mr-3' color='#47cb9d'/>Featured Projects 
+            <BsFolderFill className='mb-1 mr-3' color='#47cb9d'/>Projects 
         </h3>
         <Underline length={2} width='3' padding='0' color='#47cb9d'/>
     </div>
