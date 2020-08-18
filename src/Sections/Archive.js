@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
-import {Container, Row, Col, Card, Modal} from 'react-bootstrap'
-import {FaArchive, FaInfoCircle, FaGithub, FaLaptopCode} from 'react-icons/fa'
+import {Container, Row, Col, Card, Modal,Image, Carousel} from 'react-bootstrap'
+import {FaArchive, FaInfoCircle, FaGithub, FaDesktop} from 'react-icons/fa'
 import {TagList} from '../Components/Various'
+import ReactMarkdown from 'react-markdown'
 
 const Header = () => (
   <h3 className='d-flex justify-content-center align-items-center pb-3' id='archive'>
@@ -28,9 +29,9 @@ const ArchivedProject = ({title, subtitle, source, demo, desc, tags, imgs}) => {
     let shortenedDesc = desc.split(' ').length > 80 ? desc.split(" ").splice(0, 80).join(" ").concat('...') : desc
 
     return (
-        <Col sm={1} md={3} lg={5}>
+        <Col>
           <Card 
-            className='position-relative bg-light border-0 rounded my-5 mx-3 p-2 shadow-sm'
+            className='bg-light border-0 rounded my-3 px-2 p-2 shadow-sm'
             style={{cursor: 'pointer', transition: 'all .20s', transform: transform}}
             onClick={() => toggleModal(true)}
             onMouseOver={() => setTransform('translateY(-.4em)')}
@@ -39,11 +40,15 @@ const ArchivedProject = ({title, subtitle, source, demo, desc, tags, imgs}) => {
             <Card.Body>
               <div className='d-flex align-items-center'>
                 <h5 className='font-weight-bold'>{title}</h5>
+                <div className='d-flex flex-grow-1 justify-content-end'>
+                  <FaGithub size={20} className='mr-2'/>
+                  <FaDesktop size={20} className='ml-1'/>
+                </div>
               </div>
               <em>{subtitle}</em>
               <div className='mt-4'>
                 <div className='mt-4 text-muted'>
-                    {shortenedDesc}
+                    <ReactMarkdown source={desc} />
                 </div>
               </div>
             </Card.Body>
@@ -53,19 +58,26 @@ const ArchivedProject = ({title, subtitle, source, demo, desc, tags, imgs}) => {
             <div className='p-4'>
               <Modal.Header className='pb-2 border-0' closeButton>
                 <div className='d-flex flex-column'>
-                    <h5 className='font-weight-bold'>{title}</h5>
+                    <h4 className='font-weight-bold'>{title}</h4>
                     <em>{subtitle}</em>
                 </div>
               </Modal.Header>
               <Modal.Body className='pt-2 pb-3'>
-                <div>
-                  <Item icon={FaGithub} link={source}>View Source</Item>
-                  <Item icon={FaLaptopCode} link={demo}>Live Demo</Item>
-                </div>
+                <Carousel className='mx-2' interval={4000} indicators={false} controls={false}>
+                  {imgs.map(img =>
+                    <Carousel.Item>
+                      <Image fluid
+                        src={require('../Assets/' + img)}
+                        alt= "img"
+                        style={{maxHeight: 500, objectFit: 'scale-down'}}
+                      />
+                  </Carousel.Item>
+                  )}
+                </Carousel>
                 <div className='mt-4'>
                   <div className='d-flex flex-column my-1'>
                     <b>Description: </b>
-                      <small>{desc}</small>
+                      <ReactMarkdown source={desc} />
                   </div>
                 </div>
               </Modal.Body>
@@ -73,7 +85,6 @@ const ArchivedProject = ({title, subtitle, source, demo, desc, tags, imgs}) => {
           </Modal>
         </Col>
     )
-
 }
 
 const Archive = ({data}) => {
@@ -90,11 +101,25 @@ const Archive = ({data}) => {
         imgs={data.imgs[i]}
       />
     )
+    projects.push(
+      <ArchivedProject 
+        title={data.titles[i]}
+        subtitle={data.subtitles[i]}
+        source={data.sources[i]}
+        demo={data.demos[i]}
+        desc={data.desc[i]}
+        tags={data.tags[i]}
+        imgs={data.imgs[i]}
+      />
+    )
   }
   return (
-    <Container className='p-5' fluid >
+    <Container className='p-5' fluid>
       <Header />
-      <Row className='mx-5'>{projects}</Row>
+      <Row 
+        xs={1} sm={1} md={2} lg={3} xl={3}
+        className='mx-5 px-5'
+      >{projects}</Row>
     </Container>
   )
 }

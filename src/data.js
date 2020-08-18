@@ -1,3 +1,4 @@
+
 const data = {
 
     about: {
@@ -75,9 +76,11 @@ const data = {
         subtitles: ["An art gallery for a friend - Joshua Malekan"],
         sources: ["https://github.com/mgfalzon/gallery"],
         demos: ["https://mgfalzon.github.io/gallery"],
-        desc: ["this is a description"],
+        desc: [
+          "A simple art gallery built in React.js for a friend"
+        ],
         tags: [["React.js"]],
-        imgs: [null]
+        imgs: [['blinkResume.PNG', 'studentPortal.PNG']]
     }
 }
 
