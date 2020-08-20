@@ -33,7 +33,7 @@ const TagList = ({tags, justify, padding}) => {
         <div className='mx-1 badge text-white'style={{backgroundColor: '#47cb9d'}}>{value}</div>
     ))
     return (
-        <div className={'d-flex ' + pad + justifyContent}>
+        <div className={'d-flex ' + pad + justifyContent} style={{maxWidth: '100%'}}>
             {tagComponents}
         </div>
     )

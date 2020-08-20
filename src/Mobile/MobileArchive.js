@@ -59,7 +59,8 @@ const ArchivedProject = ({title, source, demo, desc, fullDesc, tags, imgs}) => {
               <TagList tags={tags} padding='mr-2 my-2'/>
           </Card>
           <Modal centered size='xl' show={modal} onHide={() => toggleModal(false)}>
-            <div className='rounded p-4'>
+            <div className='rounded p-3'>
+              <Modal.Header className='border-0 p-0' closeButton />
               <Modal.Body>
                 <Row xs={1}>
                   <Col>

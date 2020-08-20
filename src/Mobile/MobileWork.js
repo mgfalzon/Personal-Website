@@ -72,9 +72,9 @@ const TabContent = ({jobTitles, dates, desc, tags}) => {
                 <div className='px-4 mt-5'>
                     <Header text={jobTitles[i]} date={dates[i]} />
                     {description[i]}
-                </div>
-                <div className='pl-5'>
-                    {allTags[i]}
+                    <div className='overflow-auto'>
+                        {allTags[i]}
+                    </div>
                 </div>
             </Tab.Pane>
     }
