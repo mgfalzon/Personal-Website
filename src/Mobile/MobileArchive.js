@@ -29,9 +29,9 @@ const ArchivedProject = ({title, source, demo, desc, fullDesc, tags, imgs}) => {
     let shortenedDesc = desc.split(' ').length > 80 ? desc.split(" ").splice(0, 80).join(" ").concat('...') : desc
 
     return (
-        <Col>
+        <Col className='mb-4'>
           <Card 
-            className='bg-light border-0 rounded my-3 px-2 p-2 shadow-sm h-100'
+            className='bg-light border-0 rounded my-3 p-2 shadow-sm h-100'
             style={{cursor: 'pointer', transition: 'all .20s', transform: transform}}
             onClick={() => toggleModal(true)}
             onMouseOver={() => setTransform('translateY(-.4em)')}
@@ -61,8 +61,8 @@ const ArchivedProject = ({title, source, demo, desc, fullDesc, tags, imgs}) => {
           <Modal centered size='xl' show={modal} onHide={() => toggleModal(false)}>
             <div className='rounded p-4'>
               <Modal.Body>
-                <Row>
-                  <Col md={5}>
+                <Row xs={1}>
+                  <Col>
                     <div className='mb-4 mx-4'>
                       <h4 className='font-weight-bold mb-4'>{title}</h4>
                       <div className='d-flex flex-column my-1'>
@@ -102,7 +102,7 @@ const ArchivedProject = ({title, source, demo, desc, fullDesc, tags, imgs}) => {
     )
 }
 
-const Archive = ({data}) => {
+const MobileArchive = ({data}) => {
   const projects = []
   for(let i = 0; i < data.titles.length; i++) {
     projects.push(
@@ -119,9 +119,9 @@ const Archive = ({data}) => {
   }
   return (
     <Container className='px-5 pb-5' fluid>
-      <div className='px-5 pb-5'>
+      <div className='pb-5'>
         <Header />
-        <Row sm={1} md={2} lg={3}>
+        <Row xs={1}>
           {projects}
         </Row>
       </div>
@@ -129,4 +129,4 @@ const Archive = ({data}) => {
   )
 }
 
-export default Archive
+export default MobileArchive

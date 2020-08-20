@@ -49,7 +49,7 @@ const data = {
             ['React.js', 'React-Bootstrap', 'PHP', 'MySQL'],
         ],
         desc: [
-            `The **Blink Resume** Progressive Web App provides a more
+            `The Blink Resume **Progressive Web App** provides a more
             personal hiring experience for recruiters who can’t meet in person with their applicants. The
             PWA connects a user’s resume with a 30 second video introduction which can then be emailed to
             employers. The app is written in React.js and uses a combination of Node.js and Google Firebase on the

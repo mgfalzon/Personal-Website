@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import {Container, Row, Col, Nav, Tab} from 'react-bootstrap'
 import {BsFillBriefcaseFill, BsFillXDiamondFill} from 'react-icons/bs'
-import '../CSS/style.css'
 import {TagList, NewBadge} from '../Components/Various'
 
 const NavLink = (props) => {
