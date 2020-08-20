@@ -19,8 +19,6 @@ import MobileWork from './Mobile/MobileWork'
 import MobileProjects from './Mobile/MobileProjects'
 import MobileContact from './Mobile/MobileContact'
 
-// magit test
-
 const App = () => (
   <>
     <BrowserView>

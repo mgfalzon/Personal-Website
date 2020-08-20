@@ -43,44 +43,55 @@ const data = {
     },
 
     projects: {
-        names: ["Blink Resume", 'FGSM Student Portal', 'Blackjack'],
+        names: ["Blink Resume", 'FGSM Student Portal'],
         tags: [
             ["React.js", "Node.js", "Firebase"], 
             ['React.js', 'React-Bootstrap', 'PHP', 'MySQL'],
-            ['Python']
         ],
         desc: [
             'Generate an HTML resume with video introduction tailored for making the resume review process more personal',
             'Student portal for the Federal and Global Fellows Programs at UMD',
-            'A simple terminal based Blackjack application'
         ],
         imgs: [
             'blinkResume.PNG',
             'studentPortal.PNG',
-            'blackjack.png'
         ],
         demos: [
             null,
             '/student-portal',
-            null
         ],
         source: [
             null, 
             'https://github.com/mgfalzon/student-portal',
-            'https://github.com/mgfalzon/blackjack'
         ]
     },
 
     archive: {
-        titles: ["Art Gallery"],
-        subtitles: ["An art gallery for a friend - Joshua Malekan"],
-        sources: ["https://github.com/mgfalzon/gallery"],
-        demos: ["https://mgfalzon.github.io/gallery"],
-        desc: [
-          "A simple art gallery built in React.js for a friend"
+        titles: ["Blackjack", "Art Gallery"],
+        sources: [
+            "https://github.com/mgfalzon/blackjack",
+            "https://github.com/mgfalzon/gallery"
         ],
-        tags: [["React.js", "Javascript"]],
-        imgs: [['blinkResume.PNG', 'studentPortal.PNG']]
+        demos: [
+            null,
+            "https://mgfalzon.github.io/gallery"
+        ],
+        desc: [
+            "A simple terminal based blackjack game",
+            "A responsive art gallery built in React.js for a friend"
+        ],
+        fullDesc: [
+            "The Blackjack project is a simple game designed to test my object-oriented " + 
+            "programming skills in Python. The object oriented design allows various poker " +
+            "classes to be intuitively extended into blackjack classes. The project uses a " +
+            "Display class which appends Strings horizontally to create the text-based interface.",
+
+            "The art gallery project is a flexible image showcase that generates a variable "  +
+            "number of responsive pages based on the number of images taken from a source folder. " +
+            "Any size of image is supported. The project provides three view - small, medium, and large."
+        ],
+        tags: [['Python'], ["React.js", "Javascript"]],
+        imgs: [['blackjack.png'], ['blinkResume.PNG', 'studentPortal.PNG']]
     }
 }
 
