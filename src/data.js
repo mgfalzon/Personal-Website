@@ -35,7 +35,7 @@ const data = {
         ],
        ],
        tags: [
-           ["React.js", "HTML/CSS", "Bootstrap", "JQuery", "PHP", "MySQL"],
+           ["React.js", "HTML/CSS", "PHP", "MySQL"],
            ["React.js", "Node.js", "Firebase"],
            ["Blender"],
            []
