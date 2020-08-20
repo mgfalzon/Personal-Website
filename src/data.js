@@ -49,8 +49,16 @@ const data = {
             ['React.js', 'React-Bootstrap', 'PHP', 'MySQL'],
         ],
         desc: [
-            'Generate an HTML resume with video introduction tailored for making the resume review process more personal',
-            'Student portal for the Federal and Global Fellows Programs at UMD',
+            `The **Blink Resume** Progressive Web App provides a more
+            personal hiring experience for recruiters who can’t meet in person with their applicants. The
+            PWA connects a user’s resume with a 30 second video introduction which can then be emailed to
+            employers. The app is written in React.js and uses a combination of Node.js and Google Firebase on the
+            back-end.`,
+
+            `The FGSM student portal is a **complete UX/UI re-design** of the University of Maryland's 
+            Federal and Global Fellows student portal. In converting the original codebase from HTML and
+            CSS to React.js, much of the PHP back-end has also been rewritten and interactions between the front-end
+            and back-end have been simplifed with the introduction of the useAPI hook.`
         ],
         imgs: [
             'blinkResume.PNG',
@@ -91,7 +99,7 @@ const data = {
             "Any size of image is supported. The project provides three view - small, medium, and large."
         ],
         tags: [['Python'], ["React.js", "Javascript"]],
-        imgs: [['blackjack.png'], ['blinkResume.PNG', 'studentPortal.PNG']]
+        imgs: [['blackjack.png'], ['gallery.PNG']]
     }
 }
 
