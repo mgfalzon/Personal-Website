@@ -1,29 +1,31 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.ee9b4caf.chunk.css",
-    "main.js": "/portfolio/static/js/main.30f16cba.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.30f16cba.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.e506f2f1.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.e506f2f1.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.fb1b3dac.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.fb1b3dac.js.map",
     "static/css/2.af3c1da9.chunk.css": "/portfolio/static/css/2.af3c1da9.chunk.css",
-    "static/js/2.0b8b801b.chunk.js": "/portfolio/static/js/2.0b8b801b.chunk.js",
-    "static/js/2.0b8b801b.chunk.js.map": "/portfolio/static/js/2.0b8b801b.chunk.js.map",
+    "static/js/2.e1645695.chunk.js": "/portfolio/static/js/2.e1645695.chunk.js",
+    "static/js/2.e1645695.chunk.js.map": "/portfolio/static/js/2.e1645695.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "precache-manifest.b0121d0993131cfafa10ae966cfb6209.js": "/portfolio/precache-manifest.b0121d0993131cfafa10ae966cfb6209.js",
+    "precache-manifest.258e36e5c8d6008c4d730e54da4e25cd.js": "/portfolio/precache-manifest.258e36e5c8d6008c4d730e54da4e25cd.js",
     "service-worker.js": "/portfolio/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/portfolio/static/css/2.af3c1da9.chunk.css.map",
-    "static/css/main.ee9b4caf.chunk.css.map": "/portfolio/static/css/main.ee9b4caf.chunk.css.map",
-    "static/js/2.0b8b801b.chunk.js.LICENSE.txt": "/portfolio/static/js/2.0b8b801b.chunk.js.LICENSE.txt",
-    "static/media/blackjack.png": "/portfolio/static/media/blackjack.ae955feb.png",
-    "static/media/blinkResume.PNG": "/portfolio/static/media/blinkResume.8ab1e663.PNG",
+    "static/js/2.e1645695.chunk.js.LICENSE.txt": "/portfolio/static/js/2.e1645695.chunk.js.LICENSE.txt",
+    "static/media/blackjack.png": "/portfolio/static/media/blackjack.9bd0db0b.png",
+    "static/media/blinkResume old.PNG": "/portfolio/static/media/blinkResume old.8ab1e663.PNG",
+    "static/media/blinkResume.PNG": "/portfolio/static/media/blinkResume.57cbba7e.PNG",
+    "static/media/blinkResumeMobile.PNG": "/portfolio/static/media/blinkResumeMobile.97131760.PNG",
+    "static/media/gallery.PNG": "/portfolio/static/media/gallery.cc204753.PNG",
     "static/media/headshot.jpg": "/portfolio/static/media/headshot.2fb04570.jpg",
-    "static/media/studentPortal.PNG": "/portfolio/static/media/studentPortal.8e0e2848.PNG"
+    "static/media/student-portal.jpg": "/portfolio/static/media/student-portal.49591c8a.jpg",
+    "static/media/studentPortal.PNG": "/portfolio/static/media/studentPortal.d5a7d04c.PNG",
+    "static/media/temp.png": "/portfolio/static/media/temp.cdf412e9.png"
   },
   "entrypoints": [
     "static/js/runtime-main.fb1b3dac.js",
     "static/css/2.af3c1da9.chunk.css",
-    "static/js/2.0b8b801b.chunk.js",
-    "static/css/main.ee9b4caf.chunk.css",
-    "static/js/main.30f16cba.chunk.js"
+    "static/js/2.e1645695.chunk.js",
+    "static/js/main.e506f2f1.chunk.js"
   ]
 }
