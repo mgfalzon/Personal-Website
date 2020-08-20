@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.js": "/portfolio/static/js/main.6b00261c.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.6b00261c.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.01ee20de.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.01ee20de.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.fb1b3dac.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.fb1b3dac.js.map",
     "static/css/2.af3c1da9.chunk.css": "/portfolio/static/css/2.af3c1da9.chunk.css",
-    "static/js/2.e1645695.chunk.js": "/portfolio/static/js/2.e1645695.chunk.js",
-    "static/js/2.e1645695.chunk.js.map": "/portfolio/static/js/2.e1645695.chunk.js.map",
+    "static/js/2.d53690e8.chunk.js": "/portfolio/static/js/2.d53690e8.chunk.js",
+    "static/js/2.d53690e8.chunk.js.map": "/portfolio/static/js/2.d53690e8.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "precache-manifest.a130df5d7f5a7d125c4dac681b8e4be7.js": "/portfolio/precache-manifest.a130df5d7f5a7d125c4dac681b8e4be7.js",
+    "precache-manifest.872070910848adb3959c986624f1c5f7.js": "/portfolio/precache-manifest.872070910848adb3959c986624f1c5f7.js",
     "service-worker.js": "/portfolio/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/portfolio/static/css/2.af3c1da9.chunk.css.map",
-    "static/js/2.e1645695.chunk.js.LICENSE.txt": "/portfolio/static/js/2.e1645695.chunk.js.LICENSE.txt",
+    "static/js/2.d53690e8.chunk.js.LICENSE.txt": "/portfolio/static/js/2.d53690e8.chunk.js.LICENSE.txt",
     "static/media/blackjack.png": "/portfolio/static/media/blackjack.9bd0db0b.png",
     "static/media/blinkResume old.PNG": "/portfolio/static/media/blinkResume old.8ab1e663.PNG",
     "static/media/blinkResume.PNG": "/portfolio/static/media/blinkResume.57cbba7e.PNG",
     "static/media/blinkResumeMobile.PNG": "/portfolio/static/media/blinkResumeMobile.97131760.PNG",
     "static/media/gallery.PNG": "/portfolio/static/media/gallery.cc204753.PNG",
     "static/media/headshot.jpg": "/portfolio/static/media/headshot.2fb04570.jpg",
+    "static/media/linux.png": "/portfolio/static/media/linux.ea56331f.png",
     "static/media/student-portal.jpg": "/portfolio/static/media/student-portal.49591c8a.jpg",
     "static/media/studentPortal.PNG": "/portfolio/static/media/studentPortal.d5a7d04c.PNG",
     "static/media/temp.png": "/portfolio/static/media/temp.cdf412e9.png"
@@ -25,7 +26,7 @@
   "entrypoints": [
     "static/js/runtime-main.fb1b3dac.js",
     "static/css/2.af3c1da9.chunk.css",
-    "static/js/2.e1645695.chunk.js",
-    "static/js/main.6b00261c.chunk.js"
+    "static/js/2.d53690e8.chunk.js",
+    "static/js/main.01ee20de.chunk.js"
   ]
 }
