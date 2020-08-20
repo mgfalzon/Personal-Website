@@ -75,18 +75,22 @@ const data = {
     },
 
     archive: {
-        titles: ["Blackjack", "Art Gallery"],
+        titles: ["Blackjack", "Art Gallery", "Arch Linux Configuration"],
         sources: [
             "https://github.com/mgfalzon/blackjack",
-            "https://github.com/mgfalzon/gallery"
+            "https://github.com/mgfalzon/gallery",
+            "https://github.com/mgfalzon/dotfiles",
         ],
         demos: [
             null,
-            "https://mgfalzon.github.io/gallery"
+            "https://mgfalzon.github.io/gallery",
+            null,
         ],
         desc: [
             "A simple terminal based blackjack game",
-            "A responsive art gallery built in React.js for a friend"
+            "A responsive art gallery built in React.js for a friend",
+            `My custom arch linux configuration. Designed by to increase my
+            productivity and make those long coding sessions more enjoyable`,
         ],
         fullDesc: [
             "The Blackjack project is a simple game designed to test my object-oriented " + 
@@ -96,10 +100,13 @@ const data = {
 
             "The art gallery project is a flexible image showcase that generates a variable "  +
             "number of responsive pages based on the number of images taken from a source folder. " +
-            "Any size of image is supported. The project provides three view - small, medium, and large."
+            "Any size of image is supported. The project provides three view - small, medium, and large.",
+
+            "I'm constantly updating my arch linux configuration to my liking. This repository contains " +
+            "all relevent configuration files and bash scripts I wrote to perfect my setup."
         ],
-        tags: [['Python'], ["React.js", "Javascript"]],
-        imgs: [['blackjack.png'], ['gallery.PNG']]
+        tags: [['Python'], ["React.js", "Javascript"], ['Python', 'Bash']],
+        imgs: [['blackjack.png'], ['gallery.PNG'], ['linux.png']]
     }
 }
 

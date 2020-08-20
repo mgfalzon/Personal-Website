@@ -41,10 +41,10 @@ const ArchivedProject = ({title, source, demo, desc, fullDesc, tags, imgs}) => {
               <div className='d-flex align-items-center mb-3'>
                 <FaFolderOpen size={30} className='mr-2'/>
                 <div className='d-flex flex-grow-1 justify-content-end'>
-                  {source && <a className='link' href={source}>
+                  {source && <a className='link' href={source} target='_blank'>
                     <FaGithub size={20} />
                   </a>}
-                  {demo && <a className='link' href={demo}>
+                  {demo && <a className='link' href={demo} target='_blank'>
                     <FaGlobe size={20} style={{marginLeft: '.65rem'}}/>
                   </a>}
                 </div>
