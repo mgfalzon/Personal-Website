@@ -1,6 +1,7 @@
 import React from 'react'
 import {Container, Row, Col, Card, Image} from 'react-bootstrap'
 import {BsFolderFill} from 'react-icons/bs'
+import ReactMarkdown from 'react-markdown'
 import {Underline, TagList} from '../Components/Various' 
 
 const Header = () => (
@@ -20,10 +21,12 @@ const Project = ({name, tags, desc, img}) => (
             </Row>
             <Row className='pb-3'>
                 <Card className='border-0 '>
-                    <Card.Body className='text-muted' style={{fontSize: 18}}>{desc}</Card.Body>
+                    <Card.Body className='text-muted' style={{fontSize: 18}}>
+                        <ReactMarkdown source={desc} />
+                    </Card.Body>
                 </Card>
             </Row>
-            <Image fluid className='shadow' src={require('../Assets/' + img)} style={{objectFit: 'scale-down'}}/>
+            <Image fluid src={require('../Assets/' + img)} style={{objectFit: 'scale-down'}}/>
     </Container>
 
 

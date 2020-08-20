@@ -17,6 +17,7 @@ import MobileHeaderNav from './Mobile/MobileHeaderNav'
 import MobileAbout from './Mobile/MobileAbout'
 import MobileWork from './Mobile/MobileWork'
 import MobileProjects from './Mobile/MobileProjects'
+import MobileArchive from './Mobile/MobileArchive'
 import MobileContact from './Mobile/MobileContact'
 
 const App = () => (
@@ -37,11 +38,14 @@ const App = () => (
       <MobileAbout data={data['about']}/>
       <MobileWork  data={data['work']} />
       <MobileProjects  data={data['projects']} />
+      <MobileArchive data={data['archive']}/>
       <Spacer className='p-3' />
       <MobileContact />
       <Spacer className='p-4' />
     </MobileView>
   </>
 )
+/*
+*/
 
 export default App;

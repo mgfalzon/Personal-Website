@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import {Container, Row, Col, Navbar, Nav, Tab} from 'react-bootstrap'
 import {BsFillBriefcaseFill, BsFillXDiamondFill} from 'react-icons/bs'
-import '../CSS/style.css'
 import {TagList, NewBadge} from '../Components/Various'
 
 const NavLink = (props) => {
@@ -44,7 +43,7 @@ const Tabs = ({data}) => {
         )
     }) 
     return (
-        <Nav className='mb-4' variant='tablist' defaultActiveKey='1' style={{flexWrap: 'nowrap', overflow: 'auto'}}>{tabs}</Nav>
+        <Nav className='my-2' variant='tablist' defaultActiveKey='1' style={{flexWrap: 'nowrap', overflow: 'auto'}}>{tabs}</Nav>
     )
 }
 
@@ -70,16 +69,18 @@ const TabContent = ({jobTitles, dates, desc, tags}) => {
     for (let i = 0; i < jobTitles.length; i++) {
         tabContent[i] = 
             <Tab.Pane eventKey={i}>
-                <div className='mx-5 mt-5'>
+                <div className='px-4 mt-5'>
                     <Header text={jobTitles[i]} date={dates[i]} />
                     {description[i]}
                 </div>
-                {allTags[i]}
+                <div className='pl-5'>
+                    {allTags[i]}
+                </div>
             </Tab.Pane>
     }
     return (
-        <Row className='shadow' > 
-            <Tab.Content style={{transition: 'all .1s ease-in-out 0s'}}>
+        <Row> 
+            <Tab.Content className='w-100' style={{transition: 'all .1s ease-in-out 0s'}}>
                 {tabContent}
             </Tab.Content>
         </Row>
