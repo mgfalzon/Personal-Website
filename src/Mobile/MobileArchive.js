@@ -11,22 +11,10 @@ const Header = () => (
   </h3>
 )
 
-const Item = props => {
-    return props.link && (
-    <div className='d-flex align-items-center my-2'>
-      <div className='mx-3' style={{color: '#47cb9d'}}>
-          {React.createElement(props.icon)}
-      </div>
-      {props.children}
-    </div>
-    )
-}
-
 const ArchivedProject = ({title, source, demo, desc, fullDesc, tags, imgs}) => {
     const [linkStyle, setLinkStyle] = useState({color: '#47cb9d'})
     const [transform, setTransform] = useState('unset')
     const [modal, toggleModal] = useState(false)
-    let shortenedDesc = desc.split(' ').length > 80 ? desc.split(" ").splice(0, 80).join(" ").concat('...') : desc
 
     return (
         <Col className='mb-4'>

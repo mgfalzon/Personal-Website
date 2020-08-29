@@ -89,7 +89,7 @@ const data = {
         desc: [
             "A simple terminal based blackjack game",
             "A responsive art gallery built in React.js for a friend",
-            `My custom arch linux configuration. Designed by to increase my
+            `My custom arch linux configuration. Designed to increase my
             productivity and make those long coding sessions more enjoyable`,
         ],
         fullDesc: [
@@ -102,10 +102,10 @@ const data = {
             "number of responsive pages based on the number of images taken from a source folder. " +
             "Any size of image is supported. The project provides three view - small, medium, and large.",
 
-            "I'm constantly updating my arch linux configuration to my liking. This repository contains " +
-            "all relevent configuration files and bash scripts I wrote to perfect my setup."
+            "I'm constantly updating my arch linux configuration to my fit my liking. This repository contains " +
+            "all relevant configuration files and bash scripts I wrote to perfect my setup."
         ],
-        tags: [['Python'], ["React.js", "Javascript"], ['Python', 'Bash']],
+        tags: [['Python'], ["React.js", "Javascript"], ['Python', 'Shell Script', 'Vim Script']],
         imgs: [['blackjack.png'], ['gallery.PNG'], ['linux.png']]
     }
 }
