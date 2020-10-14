@@ -9,7 +9,7 @@
 ## Features
 
 * **Completely reusable:** All information on the site is taken from a singular
-  JSON file, including the colors! Anyone can build their own peronal site within
+  JSON file, including the colors! Anyone can build their own personal site within
   minutes using my app
 * **Mobile Support:** all devices are supported
   
