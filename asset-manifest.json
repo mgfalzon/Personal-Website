@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.js": "/portfolio/static/js/main.7fa2061d.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.7fa2061d.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.4bf13d15.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.4bf13d15.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.fb1b3dac.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.fb1b3dac.js.map",
     "static/css/2.af3c1da9.chunk.css": "/portfolio/static/css/2.af3c1da9.chunk.css",
-    "static/js/2.d53690e8.chunk.js": "/portfolio/static/js/2.d53690e8.chunk.js",
-    "static/js/2.d53690e8.chunk.js.map": "/portfolio/static/js/2.d53690e8.chunk.js.map",
+    "static/js/2.e56e90d1.chunk.js": "/portfolio/static/js/2.e56e90d1.chunk.js",
+    "static/js/2.e56e90d1.chunk.js.map": "/portfolio/static/js/2.e56e90d1.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "precache-manifest.d4ed6af9450f8fe3edfb1e8aea1d394d.js": "/portfolio/precache-manifest.d4ed6af9450f8fe3edfb1e8aea1d394d.js",
+    "precache-manifest.e6b6f6b8c5228c9dbe00cc43d4337761.js": "/portfolio/precache-manifest.e6b6f6b8c5228c9dbe00cc43d4337761.js",
     "service-worker.js": "/portfolio/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/portfolio/static/css/2.af3c1da9.chunk.css.map",
-    "static/js/2.d53690e8.chunk.js.LICENSE.txt": "/portfolio/static/js/2.d53690e8.chunk.js.LICENSE.txt",
+    "static/js/2.e56e90d1.chunk.js.LICENSE.txt": "/portfolio/static/js/2.e56e90d1.chunk.js.LICENSE.txt",
     "static/media/blackjack.png": "/portfolio/static/media/blackjack.9bd0db0b.png",
     "static/media/blinkResume old.PNG": "/portfolio/static/media/blinkResume old.8ab1e663.PNG",
     "static/media/blinkResume.PNG": "/portfolio/static/media/blinkResume.57cbba7e.PNG",
@@ -19,6 +19,7 @@
     "static/media/gallery.PNG": "/portfolio/static/media/gallery.cc204753.PNG",
     "static/media/headshot.jpg": "/portfolio/static/media/headshot.2fb04570.jpg",
     "static/media/linux.png": "/portfolio/static/media/linux.ea56331f.png",
+    "static/media/pokemon-ml.PNG": "/portfolio/static/media/pokemon-ml.7d5cdde3.PNG",
     "static/media/student-portal.jpg": "/portfolio/static/media/student-portal.49591c8a.jpg",
     "static/media/studentPortal.PNG": "/portfolio/static/media/studentPortal.d5a7d04c.PNG",
     "static/media/temp.png": "/portfolio/static/media/temp.cdf412e9.png"
@@ -26,7 +27,7 @@
   "entrypoints": [
     "static/js/runtime-main.fb1b3dac.js",
     "static/css/2.af3c1da9.chunk.css",
-    "static/js/2.d53690e8.chunk.js",
-    "static/js/main.7fa2061d.chunk.js"
+    "static/js/2.e56e90d1.chunk.js",
+    "static/js/main.4bf13d15.chunk.js"
   ]
 }
