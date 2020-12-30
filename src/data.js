@@ -75,24 +75,31 @@ const data = {
     },
 
     archive: {
-        titles: ["Blackjack", "Art Gallery", "Arch Linux Configuration"],
+        titles: ["Pokemon ML", "Blackjack", "Art Gallery", "Arch Linux Configuration"],
         sources: [
+            "https://github.com/mgfalzon/pokemon-ml",
             "https://github.com/mgfalzon/blackjack",
             "https://github.com/mgfalzon/gallery",
             "https://github.com/mgfalzon/dotfiles",
         ],
         demos: [
+            "https://mgfalzon.github.io/pokemon-ml",
             null,
             "https://mgfalzon.github.io/gallery",
             null,
         ],
         desc: [
+            "A Jupyter Notebook which explores the relationship between pokémon characteristics and win percentage",
             "A simple terminal based blackjack game",
             "A responsive art gallery built in React.js for a friend",
             `My custom arch linux configuration. Designed to increase my
             productivity and make those long coding sessions more enjoyable`,
         ],
         fullDesc: [
+            "A Jupyter Notebook which explores the relationship between pokémon characteristics " + 
+            "and win percentage in simulated battles. The notebook predicts pokémon battles with " +
+            "up to 88% accuracy using various machine learning models.",
+
             "The Blackjack project is a simple game designed to test my object-oriented " + 
             "programming skills in Python. The object oriented design allows various poker " +
             "classes to be intuitively extended into blackjack classes. The project uses a " +
@@ -105,8 +112,8 @@ const data = {
             "I'm constantly updating my arch linux configuration to my fit my liking. This repository contains " +
             "all relevant configuration files and bash scripts I wrote to perfect my setup."
         ],
-        tags: [['Python'], ["React.js", "Javascript"], ['Python', 'Shell Script', 'Vim Script']],
-        imgs: [['blackjack.png'], ['gallery.PNG'], ['linux.png']]
+        tags: [["Python", "Machine Learning"], ['Python'], ["React.js", "Javascript"], ['Python', 'Shell Script', 'Vim Script']],
+        imgs: [['pokemon-ml.PNG'], ['blackjack.png'], ['gallery.PNG'], ['linux.png']]
     }
 }
 
