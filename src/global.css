@@ -1,0 +1,84 @@
+:root {
+    --color: #47cb9d;
+    --dark-color: #36c090; 
+}
+
+.color {color: var(--color)}
+.bg-color {background-color: var(--color)}
+
+.btn {
+    color: white;
+    background-color: var(--color);
+    border: none;
+    width: 85px;
+    transition: all .2s ease-in-out;
+}
+.btn:hover {
+    background-color: var(--dark-color);
+}
+
+.header a {
+    margin: 0 .5rem;
+    color: var(--color);
+}
+.header a:hover {color: var(--dark-color)}
+
+.navbar {
+    transition-timing-function: ease-in-out;
+    transition-duration: .8s;
+}
+.navlink {color: #343a40}
+.navlink a:hover {color: #717e8c}
+
+.underline {
+    width: 175px;
+    margin: auto;
+    border-bottom: 3px solid var(--color);
+}
+.underline.large {
+    width: 300px;
+    padding-top: .5rem;
+}
+
+.work .nav-link {
+    color: black;
+    background-color: white;
+    border-style: none;
+    transition: all .2s ease-in-out;
+    padding: 1rem;
+}
+.work .nav-link:hover, .work .nav-link.active {
+    color: var(--color);
+    background-color: rgba(233, 236, 239, 0.25);
+}
+.work .nav-link.active {
+    border-left: 2px solid var(--color);
+}
+
+.projects .img {
+    max-height: 500px;
+    object-fit: scale-down;
+}
+
+.archive .project {
+    background: var(--light);
+    border: none;
+    cursor: pointer;
+    transition: all .2s;
+    transform: translateY(0);
+}
+
+.archive .project:hover {
+    transform: translateY(-.4rem);
+}
+
+.mobile .menu {
+    z-index: 3;
+    position: sticky;
+    top: 72px;
+    transition: all .5s
+}
+.menu .navlink {
+    padding: 1rem 0;
+    font-size: 25px;
+}

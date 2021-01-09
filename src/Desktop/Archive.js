@@ -1,29 +1,22 @@
-import React, {useState} from 'react'
-import {Container, Row, Col, Card, Modal,Image, Carousel} from 'react-bootstrap'
-import {FaArchive, FaFolderOpen, FaGithub, FaGlobe} from 'react-icons/fa'
-import {TagList} from '../Components/Various'
+import React, { useState } from 'react'
+import { Container, Row, Col, Card, Modal,Image, Carousel } from 'react-bootstrap'
+import { FaArchive, FaFolderOpen, FaGithub, FaGlobe } from 'react-icons/fa'
+import { TagList } from '../Components/Various'
 import ReactMarkdown from 'react-markdown'
 
 const Header = () => (
   <h3 className='d-flex justify-content-start align-items-center pb-3' id='archive'>
-    <FaArchive className='mt-1 mr-3' color='#47cb9d'/>
+    <FaArchive className='color mt-1 mr-3' />
     <span>Archived Projects</span>
   </h3>
 )
 
 const ArchivedProject = ({title, source, demo, desc, fullDesc, tags, imgs}) => {
-    const [linkStyle, setLinkStyle] = useState({color: '#47cb9d'})
-    const [transform, setTransform] = useState('unset')
     const [modal, toggleModal] = useState(false)
-
     return (
         <Col className='mb-4'>
-          <Card 
-            className='bg-light border-0 rounded my-3 px-2 p-2 shadow-sm h-100'
-            style={{cursor: 'pointer', transition: 'all .20s', transform: transform}}
+          <Card className='project shadow-sm rounded my-3 p-2 h-100'
             onClick={() => toggleModal(true)}
-            onMouseOver={() => setTransform('translateY(-.4em)')}
-            onMouseOut={() => setTransform('translateY(.4em)')}
           >
             <Card.Body className='pb-0'>
               <div className='d-flex align-items-center mb-3'>
@@ -90,31 +83,26 @@ const ArchivedProject = ({title, source, demo, desc, fullDesc, tags, imgs}) => {
     )
 }
 
-const Archive = ({data}) => {
-  const projects = []
-  for(let i = 0; i < data.titles.length; i++) {
-    projects.push(
-      <ArchivedProject 
-        title={data.titles[i]}
-        source={data.sources[i]}
-        demo={data.demos[i]}
-        desc={data.desc[i]}
-        fullDesc={data.fullDesc[i]}
-        tags={data.tags[i]}
-        imgs={data.imgs[i]}
-      />
-    )
-  }
-  return (
-    <Container className='px-5 pb-5' fluid>
-      <div className='px-5 pb-5'>
-        <Header />
-        <Row sm={1} md={2} lg={3}>
-          {projects}
-        </Row>
-      </div>
-    </Container>
-  )
-}
+const Archive = ({data}) => (
+  <Container className='archive px-5 pb-5' fluid>
+    <div className='px-5 pb-5'>
+      <Header />
+      <Row sm={1} md={2} lg={3}>
+        {
+          data.titles.map((title, i) => 
+            <ArchivedProject title={title}
+              source={data.sources[i]}
+              demo={data.demos[i]}
+              desc={data.desc[i]}
+              fullDesc={data.fullDesc[i]}
+              tags={data.tags[i]}
+              imgs={data.imgs[i]}
+            />
+          )
+        }
+      </Row>
+    </div>
+  </Container>
+)
 
 export default Archive

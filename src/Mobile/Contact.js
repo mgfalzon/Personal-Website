@@ -1,6 +1,6 @@
 import React from 'react'
-import {Container} from 'react-bootstrap'
-import {Spacer, GreenButton} from '../Components/Various'
+import { Container, Button } from 'react-bootstrap'
+import { Spacer } from '../Components/Various'
 
 const MobileContact = () => (
    <Container fluid className='bg-light' id='contact'>
@@ -12,9 +12,9 @@ const MobileContact = () => (
                 </div>
                 <Spacer className='py-3'/>
                 <div className='d-flex'>
-                    <GreenButton href='mailto:mattgfalzon@gmail.com'>Email</GreenButton>
+                    <Button href='mailto:mattgfalzon@gmail.com'>Email</Button>
                     <Spacer className='mx-3'/>
-                    <GreenButton href={process.env.PUBLIC_URL + '/resume.pdf'} download='Matthew Falzon Resume.pdf'>Resume</GreenButton>
+                    <Button href={process.env.PUBLIC_URL + '/resume.pdf'} download='Matthew Falzon Resume.pdf'>Resume</Button>
                 </div>
             </Container>
         </div>

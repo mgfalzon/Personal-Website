@@ -1,20 +1,19 @@
 import React from 'react'
-import {Container, Row, Col, Card, Image} from 'react-bootstrap'
-import {BsFolderFill} from 'react-icons/bs'
-import {Underline, TagList} from '../Components/Various' 
+import { Container, Row, Col, Card, Image } from 'react-bootstrap'
+import { BsFolderFill } from 'react-icons/bs'
+import { TagList } from '../Components/Various' 
 import ReactMarkdown from 'react-markdown'
 
 const Header = () => (
     <div className='mb-5'>
         <h3 className='text-center' id='projects'>
-            <BsFolderFill className='mb-1 mr-3' color='#47cb9d'/>Projects 
+            <BsFolderFill className='color mb-1 mr-3' />Projects 
         </h3>
-        <Underline length={2} width='3' padding='0' color='#47cb9d'/>
+        <div className='underline' />
     </div>
 )
 
 const Project = ({name, tags, desc, img, demo, source}) => (
-
     <Container fluid className='p-4 mb-5 bg-light shadow-sm' style={{borderRadius: 50}}>
         <Row sm={1} md={2}>
             <Col className='pt-5 pl-5'>
@@ -38,33 +37,24 @@ const Project = ({name, tags, desc, img, demo, source}) => (
                 </Card>
             </Col>
             <Col className='d-flex justify-content-center'>
-                <Image fluid src={require('../Assets/' + img)} 
-                    style={{maxHeight: 500, objectFit: 'scale-down'}}
-                />
+                <Image fluid src={require('../Assets/' + img)} />
             </Col>
         </Row>
     </Container>
-
-
 )
 
-const Projects = ({data}) => {
-    const projects = []
-    for(let i = 0; i < data.names.length; i++) {
-        projects.push(<Project 
-            name={data.names[i]} tags={data.tags[i]} 
-            desc={data.desc[i]}  img={data.imgs[i]} 
-            demo={data.demos[i]} source={data.source[i]}
-        />)
-    }
-    return (
-      <Container fluid>
+const Projects = ({data}) => (
+    <Container fluid className='projects'>
         <div className='p-5'>
             <Header />
-            {projects}
+            {data.names.map((name, i) => 
+                <Project name={name} tags={data.tags[i]} 
+                    desc={data.desc[i]}  img={data.imgs[i]} 
+                    demo={data.demos[i]} source={data.source[i]}
+                />
+            )}
         </div>
-       </Container>
-    )
-}
+    </Container>
+)
 
 export default Projects

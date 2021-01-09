@@ -2,14 +2,14 @@ import React from 'react'
 import {Container, Row, Col, Card, Image} from 'react-bootstrap'
 import {BsFolderFill} from 'react-icons/bs'
 import ReactMarkdown from 'react-markdown'
-import {Underline, TagList} from '../Components/Various' 
+import { TagList } from '../Components/Various' 
 
 const Header = () => (
     <div className='mb-2'>
         <h3 className='text-center' id='projects'>
             <BsFolderFill className='mb-1 mr-3' color='#47cb9d'/>Projects 
         </h3>
-        <Underline length={2} width='3' padding='0' color='#47cb9d'/>
+        <div className='underline' />
     </div>
 )
 
