@@ -30,12 +30,10 @@ const List = ({data}) => (
   </div>
 )
 
-const parseText = (text) => (
-  text.slice(0,1) == '[' && text.slice(-1) == ']' ?
-    <span className='color'>{text.slice(1, -1) + " "}</span> 
-  :
-    <span>{text + " "}</span>
-)
+const parser = s => {
+  let html = s.replace(/\[(.*?)\]/gim, "<span class='color'>$1</span>")
+  return <div dangerouslySetInnerHTML={{__html: `<div>${html}</div>`}}></div>
+}
 
 const About = ({data}) => (
   <Container fluid className='about'>
@@ -47,9 +45,7 @@ const About = ({data}) => (
         </h3>
         <p>Hello! I'm {data.nickname}, a {data.job} based in {data.location}.</p>
         <p>{data.personalDesc}</p>
-        <p>
-          {data.jobDesc.split(" ").map(word => parseText(word))}
-        </p>
+        <p>{parser(data.jobDesc)}</p>
         <p>{data.listHeader}</p>
         <List data={data.list}/>
       </Col>

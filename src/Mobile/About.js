@@ -13,9 +13,7 @@ const About = ({data}) => (
         </h3>
         <p>Hello! I'm {data.nickname}, a {data.job} based in {data.location}.</p>
         <p>{data.personalDesc}</p>
-        <p>
-          {data.jobDesc.split(" ").map(word => parseText(word))}
-        </p>
+        <p>{parser(data.jobDesc)}</p>
         <p>{data.listHeader}</p>
     </Col>
     <Col className='px-5 justify-content-around'>
