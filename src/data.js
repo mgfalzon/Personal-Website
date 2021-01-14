@@ -54,6 +54,7 @@ export default {
             tags: [],
         }
     ],
+
     projects: [
         {
             name: "Blink Resume",
@@ -81,6 +82,7 @@ export default {
             source: "https://github.com/mgfalzon/student-portal",
         },
     ],
+
     archive: [
         {
             title: "Pokemon ML",
@@ -133,4 +135,5 @@ export default {
             img: "linux.png",
         },
     ]
+
 }
