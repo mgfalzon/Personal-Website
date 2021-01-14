@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.fb015f0a.chunk.css",
+    "main.css": "/portfolio/static/css/main.a2d16316.chunk.css",
     "main.js": "/portfolio/static/js/main.495811bd.chunk.js",
     "main.js.map": "/portfolio/static/js/main.495811bd.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.fb1b3dac.js",
@@ -9,10 +9,10 @@
     "static/js/2.f0804bdd.chunk.js": "/portfolio/static/js/2.f0804bdd.chunk.js",
     "static/js/2.f0804bdd.chunk.js.map": "/portfolio/static/js/2.f0804bdd.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "precache-manifest.b17c8283351b9619e4a8f647e3ed57bc.js": "/portfolio/precache-manifest.b17c8283351b9619e4a8f647e3ed57bc.js",
+    "precache-manifest.ef0f4f269751cb5c45175703aec670d4.js": "/portfolio/precache-manifest.ef0f4f269751cb5c45175703aec670d4.js",
     "service-worker.js": "/portfolio/service-worker.js",
     "static/css/2.af3c1da9.chunk.css.map": "/portfolio/static/css/2.af3c1da9.chunk.css.map",
-    "static/css/main.fb015f0a.chunk.css.map": "/portfolio/static/css/main.fb015f0a.chunk.css.map",
+    "static/css/main.a2d16316.chunk.css.map": "/portfolio/static/css/main.a2d16316.chunk.css.map",
     "static/js/2.f0804bdd.chunk.js.LICENSE.txt": "/portfolio/static/js/2.f0804bdd.chunk.js.LICENSE.txt",
     "static/media/blackjack.png": "/portfolio/static/media/blackjack.9bd0db0b.png",
     "static/media/blinkResume old.PNG": "/portfolio/static/media/blinkResume old.8ab1e663.PNG",
@@ -30,7 +30,7 @@
     "static/js/runtime-main.fb1b3dac.js",
     "static/css/2.af3c1da9.chunk.css",
     "static/js/2.f0804bdd.chunk.js",
-    "static/css/main.fb015f0a.chunk.css",
+    "static/css/main.a2d16316.chunk.css",
     "static/js/main.495811bd.chunk.js"
   ]
 }
