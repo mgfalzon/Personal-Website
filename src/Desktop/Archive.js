@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Container, Row, Col, Card, Modal,Image, Carousel } from 'react-bootstrap'
+import { Container, Row, Col, Card, Modal, Image } from 'react-bootstrap'
 import { FaArchive, FaFolderOpen, FaGithub, FaGlobe } from 'react-icons/fa'
 import { TagList } from '../Components/Various'
 import ReactMarkdown from 'react-markdown'
@@ -11,7 +11,7 @@ const Header = () => (
   </h3>
 )
 
-const ArchivedProject = ({title, source, demo, desc, fullDesc, tags, imgs}) => {
+const ArchivedProject = ({title, source, demo, desc, fullDesc, tags, img}) => {
     const [modal, toggleModal] = useState(false)
     return (
         <Col className='mb-4'>
@@ -63,17 +63,10 @@ const ArchivedProject = ({title, source, demo, desc, fullDesc, tags, imgs}) => {
                     </div>
                   </Col>
                   <Col>
-                    <Carousel className='rounded' indicators={false} controls={false}>
-                      {imgs.map(img =>
-                        <Carousel.Item>
-                          <Image fluid 
-                            className='rounded'
-                            src={require('../Assets/' + img)}
-                            alt= "img"
-                          />
-                        </Carousel.Item>
-                      )}
-                    </Carousel>
+                    <Image fluid className='rounded'
+                      src={require('../Assets/' + img)}
+                      alt= "img"
+                    />
                   </Col>
                 </Row>
               </Modal.Body>
@@ -88,21 +81,11 @@ const Archive = ({data}) => (
     <div className='px-5 pb-5'>
       <Header />
       <Row sm={1} md={2} lg={3}>
-        {
-          data.titles.map((title, i) => 
-            <ArchivedProject title={title}
-              source={data.sources[i]}
-              demo={data.demos[i]}
-              desc={data.desc[i]}
-              fullDesc={data.fullDesc[i]}
-              tags={data.tags[i]}
-              imgs={data.imgs[i]}
-            />
-          )
-        }
+        {data.map(project => <ArchivedProject {...project} />)}
       </Row>
     </div>
   </Container>
 )
 
 export default Archive
+export { Header }

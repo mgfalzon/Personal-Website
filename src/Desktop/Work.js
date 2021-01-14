@@ -17,24 +17,6 @@ const ListItem = (props) => (
     </div>
 )
 
-const TabContent = ({jobTitles, dates, desc, tags}) => {
-    let allTags = tags.map(list => <TagList tags={list} justify='end'/>)
-    let description = desc.map(list => (list.map(item => (<ListItem>{item}</ListItem>))))
-    return (
-        <Tab.Content style={{transition: 'all .1s ease-in-out 0s'}}>
-            {jobTitles.map((title, i) => 
-                <Tab.Pane eventKey={i}>
-                    <div className='mx-5 mt-5'>
-                        <Header text={title} date={dates[i]} />
-                        {description[i]}
-                    </div>
-                    {allTags[i]}
-                </Tab.Pane>
-            )}
-        </Tab.Content>
-    )
-}
-
 const Work = ({data}) => (
     <Container fluid className='work'>
         <div className='p-5'>
@@ -46,13 +28,23 @@ const Work = ({data}) => (
                 <Row>
                     <Col md='auto mr-5'>
                         <Nav className="flex-column">
-                            {data.workplaces.map((x, i) => 
+                            {data.map(x => x.workplace).map((x, i) => 
                                 <Nav.Link eventKey={i}>{x}</Nav.Link>
                             )}
                         </Nav>
                     </Col>
                     <Col className='shadow rounded'>
-                        <TabContent jobTitles={data['jobTitles']} dates={data['dates']} desc={data['desc']} tags={data['tags']} />
+                        <Tab.Content style={{transition: 'all .1s ease-in-out 0s'}}>
+                            {data.map((x, i) => 
+                            <Tab.Pane eventKey={i}>
+                                <div className='mx-5 mt-5'>
+                                    <Header text={x.title} date={x.date} />
+                                    {x.desc.map(x => <ListItem>{x}</ListItem>)}
+                                </div>
+                                <TagList tags={x.tags} justify='end'/>
+                            </Tab.Pane>
+                            )}
+                        </Tab.Content>
                     </Col>
                 </Row>
             </Tab.Container>
@@ -61,3 +53,4 @@ const Work = ({data}) => (
 )
 
 export default Work
+export { Header, ListItem }

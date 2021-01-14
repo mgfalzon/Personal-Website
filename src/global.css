@@ -54,6 +54,10 @@
 .work .nav-link.active {
     border-left: 2px solid var(--color);
 }
+.mobile .work .nav-link.active {
+    border-left: none !important;
+    border-bottom: 2px solid var(--color);
+}
 
 .projects .img {
     max-height: 500px;

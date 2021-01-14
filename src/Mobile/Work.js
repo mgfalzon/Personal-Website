@@ -1,104 +1,44 @@
-import React, {useState} from 'react'
-import {Container, Row, Col, Navbar, Nav, Tab} from 'react-bootstrap'
-import {BsFillBriefcaseFill, BsFillXDiamondFill} from 'react-icons/bs'
-import {TagList, NewBadge} from '../Components/Various'
+import React from 'react'
+import { Container, Row, Col, Nav, Tab } from 'react-bootstrap'
+import { BsFillBriefcaseFill, BsFillXDiamondFill } from 'react-icons/bs'
+import { TagList } from '../Components/Various'
 
-const NavLink = (props) => {
-    const standard = {whiteSpace: 'nowrap', borderStyle: 'none none solid none', transition: 'all .2s ease-in-out'}
-    const unselectedStyle = {color: 'black', backgroundColor: 'white', borderStyle: 'none'}
-    const hoverStyle      = {color: '#47cb9d', backgroundColor: 'rgba(233, 236, 239, 0.25)', borderStyle: 'none'}
-    const selectedStyle   = {color: '#47cb9d', borderColor: '#47cb9d', backgroundColor: 'rgba(233, 236, 239, 0.25)'}
-    const [style, setStyle] = useState(unselectedStyle)
-
-    return (
-        <Nav.Link 
-            className='py-3'
-            eventKey= {props.eventKey}
-            onMouseOver={() => setStyle(hoverStyle)}
-            onMouseOut={() => setStyle(unselectedStyle)}
-            onClick={() => {
-                props.setActive()
-                setStyle(selectedStyle)
-            }}
-            style={props.state[props.id] ? {...standard, ...selectedStyle} : {...standard, ...style}}
-        >{props.text}</Nav.Link>
-    )
-}
-
-const Tabs = ({data}) => {
-    const defaultState = [true]
-    for (let i = 0; i < data.length - 1; i++) defaultState.push(false)
-    const [state, setState] = useState(defaultState)
-    const tabs = data.map((value, index) => {
-        const newState = []
-        for (let i = 0; i < data.length; i++) newState.push(false)
-        newState[index] = true
-        return (
-            <NavLink 
-                id={index}
-                state={state} 
-                setActive={() => setState(newState)}
-                eventKey={index} text={value}
-            />
-        )
-    }) 
-    return (
-        <Nav className='my-2' variant='tablist' defaultActiveKey='1' style={{flexWrap: 'nowrap', overflow: 'auto'}}>{tabs}</Nav>
-    )
-}
-
-const Header = (props) => (
-    <div>
-        <h4>{props.text}</h4>
-        <h6 className='text-muted mb-3'>{props.date}</h6>
-    </div>
-)
-
-const ListItem = (props) => (
-    <div className='d-flex my-2'> 
-        <div><BsFillXDiamondFill size={12} color='#47cb9d' className='mr-2'/></div>
-        <div>{props.children}</div>
-    </div>
-)
-
-
-const TabContent = ({jobTitles, dates, desc, tags}) => {
-    let description = [], tabContent = [], allTags = []
-    allTags = tags.map(list => <TagList tags={list} justify='end'/>)
-    description = desc.map(list => (list.map(item => (<ListItem>{item}</ListItem>))))
-    for (let i = 0; i < jobTitles.length; i++) {
-        tabContent[i] = 
-            <Tab.Pane eventKey={i}>
-                <div className='px-4 mt-5'>
-                    <Header text={jobTitles[i]} date={dates[i]} />
-                    {description[i]}
-                    <div className='overflow-auto'>
-                        {allTags[i]}
-                    </div>
-                </div>
-            </Tab.Pane>
-    }
-    return (
-        <Row> 
-            <Tab.Content className='w-100' style={{transition: 'all .1s ease-in-out 0s'}}>
-                {tabContent}
-            </Tab.Content>
-        </Row>
-    )
-}
+import { Header, ListItem } from '../Desktop/Work'
 
 const Work = ({data}) => (
-    <Container fluid>
-      <div className='py-5 px-4'>
-        <h3 className='pb-3' id='work'>
-          <BsFillBriefcaseFill className='mb-1 mr-3' color='#47cb9d'/>
-          Where I've Worked 
-        </h3>
-        <Tab.Container defaultActiveKey='0'>
-            <Tabs data={data.workplaces}/>
-            <TabContent jobTitles={data['jobTitles']} dates={data['dates']} desc={data['desc']} tags={data['tags']} />
-        </Tab.Container>
-      </div>
+    <Container fluid className='work'>
+        <div className='py-5 px-3'>
+            <h3 className='pb-3' id='work'>
+                <BsFillBriefcaseFill className='color mb-1 mr-3' />
+                Where I've Worked 
+            </h3>
+            <Tab.Container defaultActiveKey="0">
+                <Row>
+                    <Col md='auto mr-5'>
+                        <Nav className='d-flex text-nowrap flex-nowrap overflow-auto my-2' >
+                            {data.map(x => x.workplace).map((x, i) => 
+                                <Nav.Link eventKey={i}>{x}</Nav.Link>
+                            )}
+                        </Nav>
+                    </Col>
+                    <Col>
+                        <Tab.Content style={{transition: 'all .1s ease-in-out 0s'}}>
+                            {data.map((x, i) => 
+                            <Tab.Pane eventKey={i}>
+                                <div className='px-3 mt-5'>
+                                    <Header text={x.title} date={x.date} />
+                                    {x.desc.map(x => <ListItem>{x}</ListItem>)}
+                                </div>
+                                <div className='overflow-auto'>
+                                    <TagList tags={x.tags} justify='end'/>
+                                </div>
+                            </Tab.Pane>
+                            )}
+                        </Tab.Content>
+                    </Col>
+                </Row>
+            </Tab.Container>
+        </div>
     </Container>
 )
 

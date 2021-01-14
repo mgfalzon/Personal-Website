@@ -2,15 +2,15 @@ import React from 'react'
 import { Container, Button } from 'react-bootstrap'
 import { Spacer } from '../Components/Various'
 
-const MobileContact = () => (
-   <Container fluid className='bg-light' id='contact'>
+const Contact = () => (
+   <Container fluid className='contact bg-light' id='contact'>
         <div className='p-3'>
             <Container fluid className='d-flex flex-column justify-content-around align-items-center p-3'>
                 <div className='d-flex flex-column'>
                     <h2>Get in Touch</h2>
-                    <div className='px-5 w-100 mx-auto' style={{borderBottom: '3px solid #47cb9d'}}></div>
+                    <div className='underline' />
                 </div>
-                <Spacer className='py-3'/>
+                <Spacer className='py-3' />
                 <div className='d-flex'>
                     <Button href='mailto:mattgfalzon@gmail.com'>Email</Button>
                     <Spacer className='mx-3'/>
@@ -21,4 +21,4 @@ const MobileContact = () => (
     </Container>
 )
 
-export default MobileContact
+export default Contact

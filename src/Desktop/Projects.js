@@ -47,12 +47,7 @@ const Projects = ({data}) => (
     <Container fluid className='projects'>
         <div className='p-5'>
             <Header />
-            {data.names.map((name, i) => 
-                <Project name={name} tags={data.tags[i]} 
-                    desc={data.desc[i]}  img={data.imgs[i]} 
-                    demo={data.demos[i]} source={data.source[i]}
-                />
-            )}
+            {data.map(project => <Project {...project} />)}
         </div>
     </Container>
 )

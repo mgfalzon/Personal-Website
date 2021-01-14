@@ -1,29 +1,17 @@
-import React, {useState} from 'react'
-import {Container, Row, Col, Card, Modal,Image, Carousel} from 'react-bootstrap'
-import {FaArchive, FaFolderOpen, FaGithub, FaGlobe} from 'react-icons/fa'
-import {TagList} from '../Components/Various'
+import React, { useState } from 'react'
+import { Container, Row, Col, Card, Modal, Image } from 'react-bootstrap'
+import { FaFolderOpen, FaGithub, FaGlobe } from 'react-icons/fa'
+import { TagList } from '../Components/Various'
 import ReactMarkdown from 'react-markdown'
 
-const Header = () => (
-  <h3 className='d-flex justify-content-start align-items-center pb-3' id='archive'>
-    <FaArchive className='mt-1 mr-3' color='#47cb9d'/>
-    <span>Archived Projects</span>
-  </h3>
-)
+import { Header } from '../Desktop/Archive'
 
-const ArchivedProject = ({title, source, demo, desc, fullDesc, tags, imgs}) => {
-    const [linkStyle, setLinkStyle] = useState({color: '#47cb9d'})
-    const [transform, setTransform] = useState('unset')
+const ArchivedProject = ({title, source, demo, desc, fullDesc, tags, img}) => {
     const [modal, toggleModal] = useState(false)
-
     return (
         <Col className='mb-4'>
-          <Card 
-            className='bg-light border-0 rounded my-3 p-2 shadow-sm h-100'
-            style={{cursor: 'pointer', transition: 'all .20s', transform: transform}}
+          <Card className='project shadow-sm rounded my-3 p-2 h-100'
             onClick={() => toggleModal(true)}
-            onMouseOver={() => setTransform('translateY(-.4em)')}
-            onMouseOut={() => setTransform('translateY(.4em)')}
           >
             <Card.Body className='pb-0'>
               <div className='d-flex align-items-center mb-3'>
@@ -44,7 +32,7 @@ const ArchivedProject = ({title, source, demo, desc, fullDesc, tags, imgs}) => {
                   <ReactMarkdown source={desc} />
               </div>
             </Card.Body>
-              <TagList tags={tags} padding='mr-2 my-2'/>
+              <TagList tags={tags} padding='m-2'/>
           </Card>
           <Modal centered size='xl' show={modal} onHide={() => toggleModal(false)}>
             <div className='rounded p-3'>
@@ -71,17 +59,10 @@ const ArchivedProject = ({title, source, demo, desc, fullDesc, tags, imgs}) => {
                     </div>
                   </Col>
                   <Col>
-                    <Carousel className='rounded' indicators={false} controls={false}>
-                      {imgs.map(img =>
-                        <Carousel.Item>
-                          <Image fluid 
-                            className='rounded'
-                            src={require('../Assets/' + img)}
-                            alt= "img"
-                          />
-                        </Carousel.Item>
-                      )}
-                    </Carousel>
+                    <Image fluid className='rounded'
+                      src={require('../Assets/' + img)}
+                      alt= "img"
+                    />
                   </Col>
                 </Row>
               </Modal.Body>
@@ -91,31 +72,15 @@ const ArchivedProject = ({title, source, demo, desc, fullDesc, tags, imgs}) => {
     )
 }
 
-const MobileArchive = ({data}) => {
-  const projects = []
-  for(let i = 0; i < data.titles.length; i++) {
-    projects.push(
-      <ArchivedProject 
-        title={data.titles[i]}
-        source={data.sources[i]}
-        demo={data.demos[i]}
-        desc={data.desc[i]}
-        fullDesc={data.fullDesc[i]}
-        tags={data.tags[i]}
-        imgs={data.imgs[i]}
-      />
-    )
-  }
-  return (
-    <Container className='px-5 pb-5' fluid>
-      <div className='pb-5'>
-        <Header />
-        <Row xs={1}>
-          {projects}
-        </Row>
-      </div>
-    </Container>
-  )
-}
+const Archive = ({data}) => (
+  <Container className='archive px-5 pb-5' fluid>
+    <div className='pb-5'>
+      <Header />
+      <Row xs={1}>
+        {data.map(project => <ArchivedProject {...project} />)}
+      </Row>
+    </div>
+  </Container>
+)
 
-export default MobileArchive
+export default Archive
