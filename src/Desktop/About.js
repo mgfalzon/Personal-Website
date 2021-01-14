@@ -57,4 +57,4 @@ const About = ({data}) => (
 )
 
 export default About
-export { List, parseText }
+export { List, parser }

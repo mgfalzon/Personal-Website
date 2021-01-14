@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row, Col, Nav, Tab } from 'react-bootstrap'
-import { BsFillBriefcaseFill, BsFillXDiamondFill } from 'react-icons/bs'
+import { BsFillBriefcaseFill } from 'react-icons/bs'
 import { TagList } from '../Components/Various'
 
 import { Header, ListItem } from '../Desktop/Work'

@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Col, Image } from 'react-bootstrap'
 import { BsPeopleCircle } from 'react-icons/bs'
 
-import { List, parseText } from '../Desktop/About'
+import { List, parser } from '../Desktop/About'
 
 const About = ({data}) => (
   <Container fluid>
