@@ -8,14 +8,14 @@
 
 .btn:focus {box-shadow: none !important}
 .btn, .btn:focus {
-    color: white;
-    background-color: var(--color);
-    border: none;
-    width: 85px;
-    transition: all .2s ease-in-out;
+    color: white imp !important;
+    background-color: var(--color) !important;
+    border: none !important;
+    width: 85px !important;
+    transition: all .2s ease-in-out !important;
 }
 .btn:hover {
-    background-color: var(--dark-color);
+    background-color: var(--dark-color) !important;
 }
 
 .header a {
@@ -28,8 +28,8 @@
     transition-timing-function: ease-in-out;
     transition-duration: .8s;
 }
-.navlink {color: #343a40}
-.navlink a:hover {color: #717e8c}
+.navlink {color: #343a40 !important}
+.navlink a:hover {color: #717e8c !important}
 
 .underline {
     width: 175px;
