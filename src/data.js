@@ -23,6 +23,17 @@ export default {
             tags: ["React.js", "HTML/CSS", "PHP", "MySQL"],
         },
         {
+            workplace: "Atlassian",
+            title: "Software Engineer Intern",
+            date: "May 2021 - Aug 2021",
+            desc: [
+                "Developed the Confluence Cloud app for Microsoft Teams using React.js, Node.js and a DynamoDB based NoSQL database",
+                "Designed and implemented the comments section functionality for pinned Confluence pages within Microsoft Teams using Confluence Cloud's web API",
+                "Used AWS to deploy an SQS queue and worker which listens to and processes events from Atlassian's internal event bus"
+            ],
+            tags: ["React.js", "Node.js", "Typescript", "DynamoDB"],
+        },
+        {
             workplace: "SPS Consulting",
             title: "Full-Stack Developer",
             date: "Summer 2020",
@@ -44,15 +55,6 @@ export default {
             ],
             tags: ["Blender"],
         },
-        {
-            workplace: "Falzon Electrical Contracting",
-            title: "Assistant Electrician",
-            date: "Winter 2020, Summer 2019",
-            desc: [
-                "Worked at various sites installing and updating electrical appliances including but not limited to switches, outlets, lights, Fixtures, and smoke detectors"
-            ],
-            tags: [],
-        }
     ],
 
     projects: [
