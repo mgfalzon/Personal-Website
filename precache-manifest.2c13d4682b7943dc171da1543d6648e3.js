@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4835f273efc4ff4e01844dd53229ecad",
+    "revision": "b3f171466d5122b1017fae9624cbc844",
     "url": "/portfolio/index.html"
   },
   {
-    "revision": "f48f8d3367bd0600ac4d",
+    "revision": "caccf069a89d21c5ba7f",
     "url": "/portfolio/static/css/2.bac56067.chunk.css"
   },
   {
-    "revision": "22f259a91e0a0dacfabf",
+    "revision": "f9560ed0aeb79130c420",
     "url": "/portfolio/static/css/main.1365a7e0.chunk.css"
   },
   {
-    "revision": "f48f8d3367bd0600ac4d",
-    "url": "/portfolio/static/js/2.f0804bdd.chunk.js"
+    "revision": "caccf069a89d21c5ba7f",
+    "url": "/portfolio/static/js/2.58c841ce.chunk.js"
   },
   {
     "revision": "31275beaab1caf09fcde15fc56b15ece",
-    "url": "/portfolio/static/js/2.f0804bdd.chunk.js.LICENSE.txt"
+    "url": "/portfolio/static/js/2.58c841ce.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "22f259a91e0a0dacfabf",
-    "url": "/portfolio/static/js/main.9750d3ad.chunk.js"
+    "revision": "f9560ed0aeb79130c420",
+    "url": "/portfolio/static/js/main.2398d48d.chunk.js"
   },
   {
     "revision": "88fbd3d397ae3690d5f2",
@@ -52,8 +52,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio/static/media/headshot.2fb04570.jpg"
   },
   {
+    "revision": "ba0fb4fe3c3c07adc2465bd8c21d685e",
+    "url": "/portfolio/static/media/iphoneBase.ba0fb4fe.png"
+  },
+  {
     "revision": "ea56331f87a1488f025306d9fd827c14",
     "url": "/portfolio/static/media/linux.ea56331f.png"
+  },
+  {
+    "revision": "e523604b482416eba511e45c126a3abf",
+    "url": "/portfolio/static/media/mac.e523604b.png"
   },
   {
     "revision": "7d5cdde37c6a717f45c422739f6e4bef",
